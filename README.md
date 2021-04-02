@@ -2,7 +2,7 @@
 
 Selamat datang di DOM Cloud! Hosting provider yang inovatif untuk developer IT di Indonesia.
 
-Kami menggunakan GitHub untuk [Pertanyaan](./issues) dan [Diskusi](./discussion). Untuk pertanyaan privat silahkan kirimkan email ke [support@domcloud.id](mailto:support@domcloud.id).
+Kami menggunakan GitHub untuk [Pertanyaan](https://github.com/domcloud/domcloud-id/issues) dan [Diskusi](https://github.com/domcloud/domcloud-id/discussions). Untuk pertanyaan privat silahkan kirimkan email ke [support@domcloud.id](mailto:support@domcloud.id).
 
 > For english communication please use [the other repository](https://github.com/domcloud/domcloud-io/).
 
@@ -204,7 +204,7 @@ chmod -R 750 ~/
 
 Ada 2 kemungkinan:
 
-+ Jika ini terjadi untuk semua URL halaman, kemungkinan anda lupa untuk mengatur NGINX untuk [memusatkan index.php]() atau [menyalakan mode passenger]() untuk non-PHP.
++ Jika ini terjadi untuk semua URL halaman, kemungkinan anda lupa untuk mengatur NGINX untuk [memusatkan index.php](#bagaimana-caranya-memasang-framework-php) atau [menyalakan mode passenger](#bagaimana-caranya-memasang-aplikasi-non-php) untuk non-PHP.
 + Jika ini terjadi untuk beberapa file saja, mungkin ada kesalahan seperti tipo di URL, salah Base URL atau tidak memperhatikan besar-kecil nama file.
 
 
@@ -214,12 +214,12 @@ Ini berarti ada error dalam PHP anda, namun tidak seperti XAMPP, secara default 
 
 Anda mempunyai 2 pilihan untuk melihat error tersebut:
 + Melalui Webmin > Logs and Reports > Nginx Error Log
-+ [Set di .user.ini](): `display_errors = On`
++ [Set di .user.ini](bagaimana-caranya-mengatur-pengaturan-php-phpini): `display_errors = On`
 
 ### Halaman Nginx Error `502 Bad Gateway`
 
-Kemungkinan file yang anda upload terlalu besar atau script PHP yang anda jalankan terlalu lama. Anda bisa membetulkan ini melalui [file .user.ini]().
+Kemungkinan file yang anda upload terlalu besar atau script PHP yang anda jalankan terlalu lama. Anda bisa membetulkan ini melalui [file .user.ini](bagaimana-caranya-mengatur-pengaturan-php-phpini).
 
 ## Pertanyaan Lain
 
-Silahkan gunakan [fasilitas diskusi](./discussion) :)
+Silahkan gunakan [fasilitas diskusi](https://github.com/domcloud/domcloud-id/discussions) :)
