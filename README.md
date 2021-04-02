@@ -76,7 +76,7 @@ Fitur ini digunakan untuk mengatur aspek yang tidak ada di Virtualmin. Diantaran
 + Mengatur Server NGINX termasuk Alamat Root Dokumen.
 + Instalasi aplikasi server melalui perintah bash script.
 
-Anda dapat mempelajari syntax deployment di repo [dom-templates](https://github.com/willnode/dom-templates/#readme).
+Anda dapat mempelajari syntax deployment di repo [dom-templates](https://github.com/domcloud/dom-templates/#readme).
 
 ### Bagaimana caranya memperbarui SSL?
 
@@ -125,7 +125,7 @@ nginx:
     enabled: on
 ```
 
-Dari sini Passenger akan menjadi file startup seperti `app.js`, `passenger_wsgi.py` atau `config_ru` di dalam `public_html`. Jika struktur project anda tidak seperti ini anda juga dapat menggunakan Passenger Generic Support Language (GLS) seperti berikut:
+Dari sini Passenger akan mencari file startup seperti `app.js`, `passenger_wsgi.py` atau `config_ru` di dalam `public_html`. Jika struktur project anda tidak seperti ini anda juga dapat menggunakan Passenger Generic Support Language (GLS) seperti berikut:
 
 ```yml
 root: public_html/public
@@ -160,7 +160,7 @@ passenger-config restart-app /
 
 Pelajari lebih banyak pengaturan Passenger di [official docs](https://www.phusionpassenger.com/docs/references/config_reference/nginx/).
 
-### Bagaimana caranya menambah Enviroment Variables?
+### Bagaimana caranya menambah Environment Variables?
 
 anda dapat menulisnya di `~/.env` lalu menulisnya seperti ini:
 
@@ -171,7 +171,7 @@ export FOO='bar'
 
 ### Bagaimana caranya mengarahkan DNS ke DOM Cloud?
 
-Jika anda upgrade
+Jika anda upgrade ke paket Lite keatas, anda dapat menyalakan
 
 ## FAQ Troubleshooting
 
