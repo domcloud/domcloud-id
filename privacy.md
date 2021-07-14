@@ -4,7 +4,7 @@ layout: page
 lang: id
 ---
 
-> *Update terakhir: 26 September 2020*
+> *Update terakhir: 14 Juli 2021*
 
 Terima kasih telah mempercayakan DOM Cloud Hosting ("DOM Cloud", "kami") dengan website Anda, dan informasi pribadi Anda. Memegang informasi pribadi Anda adalah tanggung jawab yang serius, dan kami ingin Anda tahu bagaimana kami menanganinya.
 
@@ -26,11 +26,11 @@ Kami juga dapat menggunakan informasi pribadi yang dikumpulkan melalui situs Web
 
 #### Data Pembayaran
 
-Saat anda meregistrasi akun hosting berbayar (premium), kami mengirimkan data registrasi yakni nama lengkap, alamat email dan nomor HP untuk mitra kami, iPaymu, memproses transaksi anda. Mohon dimengerti bahwa, kami tidak memproses atau menyimpan data untuk transaksi, seperti kartu kredit, informasi bank atau informasi transaksi lainnya dari anda, namun mitra transaksi kami yang memproses informasi tersebut.
+Saat anda meregistrasi akun hosting berbayar (premium), kami mengirimkan data registrasi yakni nama lengkap, alamat email dan nomor HP untuk mitra kami, iPaymu atau PayPal, memproses transaksi anda. Mohon dimengerti bahwa, kami tidak memproses atau menyimpan data untuk transaksi, seperti kartu kredit, informasi bank atau informasi transaksi lainnya dari anda, namun mitra transaksi kami yang memproses informasi tersebut.
 
 #### Data Domain dan WHOIS
 
-Saat anda meregistrasi domain baru untuk keperluan hosting, kami meminta data tambahan, seperti nama bisnis anda dan alamat lengkap anda. Bersamaan dengan data registrasi anda, kami proses ke ke mitra domain kami, ResellerCamp. Data tersebut digunakan untuk keperluan WHOIS, sehingga orang lain dapat mengakses data tersebut sebagai bagian dari tanggung jawab anda mengelola domain. Jika anda ingin merahasiannya, anda dapat membeli tambahan proteksi privasi jika tersedia.
+Saat anda meregistrasi domain baru untuk keperluan hosting, kami meminta data tambahan, seperti nama bisnis anda dan alamat lengkap anda. Bersamaan dengan data registrasi anda, kami proses ke ke mitra domain kami, DigitalRegistra. Data tersebut digunakan untuk keperluan WHOIS, sehingga orang lain dapat mengakses data tersebut sebagai bagian dari tanggung jawab anda mengelola domain. Jika anda ingin merahasiannya, anda dapat membeli tambahan proteksi privasi jika tersedia.
 
 #### Data Server dan Hosting
 
@@ -48,12 +48,12 @@ Mohon dipahami bahwa kata sandi hosting berbeda dengan **kata sandi akun portal*
 
 #### Bagaimana Kami Mengontak Anda
 
-Kami menggunakan alamat email anda sebagai sarana notifikasi utama; contohnya, saat anda melakukan pembelian dan saat masa pembelian hosting anda akan habis. Email otomatis yang resmi dari DOM Cloud hanya menggunakan akhiran **@mail.domcloud.id** dan didalam email tersebut selalu menyebutkan nama lengkap anda sesuai yang anda isi dalam data registrasi.
+Kami menggunakan alamat email anda sebagai sarana notifikasi utama; contohnya, saat anda melakukan pembelian dan saat masa pembelian hosting anda akan habis. Email otomatis yang resmi dari DOM Cloud hanya menggunakan akhiran **@domcloud.id** dan didalam email tersebut selalu menyebutkan nama lengkap anda sesuai yang anda isi dalam data registrasi.
 
-Jika anda ingin mengajukan pertanyaan tiket melalui WhatsApp yang tertera pada sudut kanan bawah, maka kami akan mengontak anda dengan nomor yang sama saat anda mengajukan pertanyaan. Anda juga dapat mengontak kami melalui email **support@domcloud.id**.
+Jika anda ingin mengajukan pertanyaan, anda dapat menggunakan panel diskusi GitHub atau tanyakan kami melalui email **support@domcloud.id**. Mohon diperhatikan panel diskusi GitHub
 
 #### Perubahan Lainnya
 
-Kami berhak untuk mengubah pernyataan privasi ini, apabila dibutuhkan; dengan atau tanpa pemberitahuan dengan anda. Segala pertanyaan mengenai pernyataan privasi atau syarat dan ketentuan kami, bisa anda tanyakan melalui tiket WhatsApp yang tersedia di tombol kanan bawah website ini.
+Kami berhak untuk mengubah pernyataan privasi ini, apabila dibutuhkan; dengan atau tanpa pemberitahuan dengan anda. Segala pertanyaan mengenai pernyataan privasi atau syarat dan ketentuan kami, bisa anda tanyakan melalui email atau panel diskusi GitHub tersedia di tombol kanan bawah website ini.
 
-*Anda dapat melihat [arsip perubahan pernyataan privasi ini disini](https://github.com/domcloud/dom-site/commits/master/privacy.md)*
+*Anda dapat melihat [arsip perubahan pernyataan privasi ini disini](https://github.com/domcloud/domcloud-id/commits/master/privacy.md)*

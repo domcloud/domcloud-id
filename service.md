@@ -4,7 +4,7 @@ layout: page
 lang: id
 ---
 
-> *Update terakhir: 25 September 2020*
+> *Update terakhir: 14 Juli 2021*
 
 Harap membaca pemberitahuan berikut sebelum menggunakan situs web ini. Penggunaan layanan dan fitur-fiturnya berarti Anda telah menerima syarat dan ketentuan yang berlaku. Melanggar atau mengabaikan salah satu syarat dan ketentuan berikut akan berdampak pada pemberian sanksi hingga penutupan akun dengan atau tanpa pemberitahuan.
 
@@ -52,18 +52,20 @@ Selain memberikan limit kepada hal yang tertera pada pricing, DOM menerapkan FUP
 
 Anda setuju untuk memberikan informasi pembayaran yang benar dalam memesan produk atau layanan kami. Order Anda akan diproses begitu konfirmasi pembayaran dilakukan.
 
-Semua hosting yang disuspend karena alasan abuse atau belum melakukan pembayaran atau perpanjangan lebih dari 14 hari akan dihapus secara permanen. DOM Cloud tidak memberikan backup hosting yang sudah dihapus secara permanen. Mohon dipahami bahwa hal ini tidak berpengaruh pada hosting yang kehabisan disk space maupun bandwidth.
+Semua hosting yang disuspend karena alasan abuse atau belum melakukan pembayaran atau perpanjangan lebih dari 30 hari akan dihapus secara permanen. DOM Cloud tidak memberikan backup hosting yang sudah dihapus secara permanen. Mohon dipahami bahwa hal ini tidak berpengaruh pada hosting yang kehabisan disk space maupun bandwidth.
 
 ## Ketentuan Pengembalian Uang (Refund)
 
 DOM Cloud memberikan kesempatan untuk melakukan pengembalian uang (refund) apabila anda baru membeli hosting paket Pro keatas yang berumur kurang dari 30 hari sejak pembelian pertama. Refund tersebut berupa pengembalian uang 90% dari harga hosting, tidak termasuk pembelian domain dan tambahan data bandwidth. Mohon dipertimbangkan bahwa Refund tidak berlaku untuk perpanjangan atau upgrade paket.
 
-Kami hanya melayani proses refund ke dalam rekening Himbara (BNI, BRI, Mandiri atau BTN) untuk Bank Indonesia atau melalui TransferWire untuk bank di negara lain. Setelah kami mengirimkan uang, hosting anda secara otomatis terhapus tanpa ada pemberitahuan dan backup lainnya. Anda dapat mengajukan Refund melalui kontak WhatsApp atau email kami.
+Kami hanya melayani proses refund ke dalam rekening Himbara (BNI, BRI, Mandiri atau BTN) untuk Bank di Indonesia atau melalui Paypal untuk pengguna di negara lain. Setelah kami mengirimkan uang, hosting anda secara otomatis terhapus tanpa ada pemberitahuan dan backup lainnya. Anda dapat mengajukan Refund melalui kontak WhatsApp atau email kami.
 
 ## Ketentuan Umum
 
 Anda dan setiap orang yang memiliki akses ke akun Anda harus mengevaluasi dan menanggung risiko yang terkait dengan ketepatan, kelengkapan atau kegunaan dari konten situs web anda.
-Tidak ada toleransi atas aktivitas spamming. Kami tidak memberikan toleransi terhadap pengiriman email yang tidak diminta, email massal dan spam. Semua akun pengguna yang melakukan spamming akan ditangguhkan dengan atau tanpa pemberitahuan.
+Tidak ada toleransi atas aktivitas spamming.
+
+Kami tidak memberikan toleransi terhadap pengiriman email yang tidak diminta, email massal dan spam. Semua akun pengguna yang melakukan spamming akan ditangguhkan dengan atau tanpa pemberitahuan.
 
 DOM Cloud berhak untuk menampilkan logo, profil, alamat website klien di website DOM. Klien dapat menghubungi layanan pelanggan DOM Cloud jika keberatan atau tidak setuju.
 
@@ -71,7 +73,7 @@ Dengan mendaftar di DOM Cloud, email Anda secara otomatis akan ditambahkan ke da
 
 ## Backup dan Kehilangan Data
 
-Anda menggunakan layanan ini dengan resiko Anda sendiri. Kami tidak bertanggung jawab atas file yang hilang dan atau rusak yang mungkin terjadi (termasuk, misalnya, dari sistem crash, pelanggaran keamanan, atau kegagalan hard disk dan sistem). Anda setuju untuk melakukan backup file dan data Anda secara mandiri atau terjadwal melalui fitur Regular Backup.
+Anda menggunakan layanan ini dengan resiko Anda sendiri. Kami tidak bertanggung jawab atas file yang hilang dan atau rusak yang mungkin terjadi (termasuk, misalnya, dari sistem crash, pelanggaran keamanan, atau kegagalan hard disk dan sistem). Anda setuju untuk melakukan backup file dan data Anda secara mandiri atau terjadwal melalui regular backup atau pihak ketiga.
 
 ## Penggantian Kerugian
 
@@ -95,4 +97,4 @@ DOM Cloud berhak untuk mengubah kebijakannya kapan saja tanpa ada pemberitahuan.
 
 DOM Cloud dan pengguna sepakat untuk menyelesaikan sengketa secara musyawarah untuk mencapai mufakat. Apabila sengketa tidak dapat diselesaikan secara musyawarah, maka akan diselesaikan sesuai ketentuan hukum yang berlaku di Indonesia.
 
-*Anda dapat melihat arsip [perubahan pernyataan dan ketentuan layanan ini disini](https://github.com/domcloud/dom-site/commits/master/service.md)*
+*Anda dapat melihat arsip [perubahan pernyataan dan ketentuan layanan ini disini](https://github.com/domcloud/domcloud-id/commits/master/service.md)*
