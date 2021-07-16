@@ -1,0 +1,114 @@
+- title: Paket Freedom
+  style: ''
+  price: Gratis!
+  renew: Renewal 2 bulan sekali
+  items:
+  - icon: fa-hdd
+    text: Kapasitas Disk <b>256 MiB</b>
+  - icon: fa-briefcase
+    text: Data Transfer Bulanan <b>1 GiB</b>
+  - icon: fa-times-circle text-danger
+    text: Tanpa Data Transfer Add-ons
+  - icon: fa-times-circle text-danger
+    text: Tanpa Custom Domain / DNS
+  - icon: fa-times-circle text-danger
+    text: Tanpa Subdomain
+  - icon: fa-times-circle text-danger
+    text: Tanpa Subakun
+  - icon: fa-database
+    text: 1 Database
+- title: Paket Lite
+  style: 'color: indigo'
+  price: Rp. 50.000
+  renew: Per Tahun
+  items:
+  - icon: fa-hdd
+    text: Kapasitas Disk <b>1 GiB</b>
+  - icon: fa-briefcase
+    text: Data Transfer Bulanan <b>3 GiB</b>
+  - icon: fa-business-time
+    text: Data Transfer Add-Ons <b>9 GiB</b>
+  - icon: fa-globe
+    text: Custom Domain / DNS
+  - icon: fa-times-circle text-danger
+    text: Tanpa Subdomain
+  - icon: fa-times-circle text-danger
+    text: Tanpa Subakun
+  - icon: fa-database
+    text: 2 Database
+- title: Paket Kit
+  style: 'color: darkblue'
+  price: Rp. 100.000
+  renew: Per Tahun
+  items:
+  - icon: fa-hdd
+    text: Kapasitas Disk <b>2 GiB</b>
+  - icon: fa-briefcase
+    text: Data Transfer Bulanan <b>5 GiB</b>
+  - icon: fa-business-time
+    text: Data Transfer Add-Ons <b>15 GiB</b>
+  - icon: fa-globe
+    text: Custom Domain / DNS
+  - icon: fa-project-diagram
+    text: 2 Subdomain
+  - icon: fa-times-circle text-danger
+    text: Tanpa Subakun
+  - icon: fa-database
+    text: 5 Database
+- title: Paket Pro
+  style: 'color: white; background: black; text-shadow: 0 0 15px white'
+  price: Rp. 250.000
+  renew: Per Tahun
+  items:
+  - icon: fa-hdd
+    text: Kapasitas Disk <b>4 GiB</b>
+  - icon: fa-briefcase
+    text: Data Transfer Bulanan <b>10 GiB</b>
+  - icon: fa-business-time
+    text: Data Transfer Add-Ons <b>30 GiB</b>
+  - icon: fa-globe
+    text: Custom Domain / DNS
+  - icon: fa-project-diagram
+    text: 7 Subdomain
+  - icon: fa-users
+    text: 15 Subakun
+  - icon: fa-database
+    text: 15 Database
+- title: Paket Super
+  style: 'color: lightgoldenrodyellow; background: black; text-shadow: 0 0 13px white'
+  price: Rp. 600.000
+  renew: Per Tahun
+  items:
+  - icon: fa-hdd
+    text: Kapasitas Disk <b>7 GiB</b>
+  - icon: fa-briefcase
+    text: Data Transfer Bulanan <b>30 GiB</b>
+  - icon: fa-business-time
+    text: Data Transfer Add-Ons <b>90 GiB</b>
+  - icon: fa-globe
+    text: Custom Domain / DNS
+  - icon: fa-project-diagram
+    text: 15 Subdomain
+  - icon: fa-users
+    text: 30 Subakun
+  - icon: fa-database
+    text: 30 Database
+- title: Paket Ultimate
+  style: 'color: lightblue; background: black; text-shadow: 0 0 10px white'
+  price: Rp. 1.000.000
+  renew: Per Tahun
+  items:
+  - icon: fa-hdd
+    text: Kapasitas Disk <b>10 GiB</b>
+  - icon: fa-briefcase
+    text: Data Transfer Bulanan <b>50 GiB</b>
+  - icon: fa-business-time
+    text: Data Transfer Add-Ons <b>150 GiB</b>
+  - icon: fa-globe
+    text: Custom Domain / DNS
+  - icon: fa-project-diagram
+    text: 30 Subdomain
+  - icon: fa-users
+    text: 50 Subakun
+  - icon: fa-database
+    text: 50 Database
