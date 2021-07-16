@@ -33,7 +33,7 @@
 - name: Static Website
   icon: https://simpleicons.org/icons/html5.svg
   color: "#E34F26"
-  link: cakephp.yml
+  link: statichtml.yml
 - name: CodeIgniter
   icon: https://simpleicons.org/icons/codeigniter.svg
   color: "#F45E3F"
@@ -53,11 +53,11 @@
 - name: Next.js
   icon: https://simpleicons.org/icons/nextdotjs.svg
   color: "#000000"
-  link: nextdotjs.yml
+  link: nextjs.yml
 - name: Nuxt.js
   icon: https://simpleicons.org/icons/nuxtdotjs.svg
   color: "#00C58E"
-  link: nuxtdotjs.yml
+  link: nuxtjs.yml
 - name: Gatsby
   icon: https://simpleicons.org/icons/gatsby.svg
   color: "#663399"
@@ -85,7 +85,7 @@
 - name: Go
   icon: https://simpleicons.org/icons/go.svg
   color: "#00ADD8"
-  link: rust.yml
+  link: go.yml
 - name: Rust
   icon: https://simpleicons.org/icons/rust.svg
   color: "#000000"

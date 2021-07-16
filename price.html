@@ -3,13 +3,13 @@ lang: id
 title: Harga
 excerpt: Manakah paket hosting yang cocok untuk anda? Dari paket Freedom ke Ultimate, pasti ada yang cocok untuk ukuran website anda.
 layout: default
-color: '#c50'
+color: '#50c'
 ---
 
 <div class="text-center">
   <div class="jumbotron bg top fixed text-white" style="
-      --bg: url(https://images.unsplash.com/photo-1437773540554-96d393b4d0c9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1056&q=80);
-      background-color: #c50;
+      --bg: url(https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1056&q=80);
+      background-color: #50c;
     ">
     <h1 class="display-4">Daftar Harga Paket Hosting</h1>
     <div class="text-sm">Manakah paket hosting yang cocok untuk anda?</div>
@@ -26,7 +26,8 @@ color: '#c50'
             <div class="row justify-content-center">
               <div class="list-group text-start col-auto">
                 {% for item in plan.items %}
-                <div class="list-group-item" style="{{ plan.style }}"><i class="fas {{item.icon}} me-2"></i> {{ item.text }}</div>
+                <div class="list-group-item" style="{{ plan.style }}"><i class="fas {{item.icon}} me-2"></i>
+                  {{ item.text }}</div>
                 {% endfor %}
               </div>
             </div>
@@ -39,18 +40,45 @@ color: '#c50'
 
 </div>
 
+<div class="container">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="text-center">Multi Lokasi Server</h3>
+      <div style="position: relative;">
+        <img src="/assets/worldmap.png" class="w-100" alt="">
+        <a href="#sga" style="position: absolute;
+            top: 57.3%;
+            left: 75.8%;
+            font-size: 30px;
+            transform: translate(-11px, -45px);" data-bs-toggle="popover" data-bs-trigger="focus"  title="SGA Server"
+          data-bs-content="CNAME: sga.domcloud.id,&lt;br&gt; DEFAULT DOMAIN: *.dom.my.id" data-bs-html="true">
+          <i class="fas fa-map-marker-alt"></i>
+        </a>
+        <a href="#nyc" style="position: absolute;
+          top: 31.5%;
+          left: 27.8%;
+          font-size: 30px;
+          transform: translate(-11px, -45px);" data-bs-toggle="popover" data-bs-trigger="focus"  title="NYC Server"
+          data-bs-content="CNAME: nyc.domcloud.id,&lt;br&gt; DEFAULT DOMAIN: *.domcloud.io" data-bs-html="true">
+          <i class="fas fa-map-marker-alt"></i>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <div class="p-5">
   <h2 class="mb-3 text-center">FAQ</h2>
   <div class="row">
     {% for faqrow in site.data.faqs %}
-    <div class="col-lg-4">
+    <div class="col-md-4">
       <div class="accordion">
         {% for faq in faqrow %}
         <div class="accordion-item">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{ faq.id }}"
-              aria-expanded="false">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#{{ faq.id }}" aria-expanded="false">
               {{ faq.title }}
             </button>
           </h2>
@@ -66,3 +94,11 @@ color: '#c50'
   <p class="mt-2 text-center">
     <a class="btn btn-lg btn-warning" href="https://portal.domcloud.id/id/register">Daftar Sekarang</a>
   </p>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl)
+      })
+    });
+  </script>
