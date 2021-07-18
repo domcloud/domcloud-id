@@ -1,11 +1,11 @@
 - name: WordPress
   icon: https://simpleicons.org/icons/wordpress.svg
   color: "#21759B"
-  link: wordpress.yml
+  link: wordpress-id.yml
 - name: WooCommerce
   icon: https://simpleicons.org/icons/woo.svg
   color: "#96588A"
-  link: woocommerce.yml
+  link: woocommerce-id.yml
 - name: Drupal
   icon: https://simpleicons.org/icons/drupal.svg
   color: "#0678BE"
@@ -21,7 +21,7 @@
 - name: Flarum
   icon: /assets/flarum.svg
   color: "#E7762E"
-  link: drupal.yml
+  link: flarum.yml
 - name: Ghost
   icon: https://simpleicons.org/icons/ghost.svg
   color: "#15171A"

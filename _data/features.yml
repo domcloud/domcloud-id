@@ -1,0 +1,74 @@
+features:
+  - title: Virtualmin Panel
+    sub1: Kelola file server secara interaktif
+    sub2: cPanel-like, tapi lebih user-friendly
+    img: /assets/virtualmin.png
+  - title: Nginx Webserver
+    sub1: Atur konfigurasi webserver dengan mudah
+    sub2: Jauh lebih cepat dan mudah daripada Apache
+    img: /assets/nginx.png
+  - title: Let's Encrypt
+    sub1: Koneksi HTTPS secara otomatis
+    sub2: Tanpa harus membeli sertifikat SSL!
+    img: /assets/letsencrypt.png
+  - title: PostgreSQL
+    sub1: Database modern alternatif MySQL
+    sub2: MySQL tentu tetap bisa digunakan tentunya
+    img: /assets/postgresql.png
+  - title: PHP
+    sub1: Toolset multi-versi PHP termasuk Composer
+    sub2: Butuh PHP 5.6? 7.4? 8.x? Bisa diatur.
+    img: /assets/php.png
+  - title: Phusion Passenger
+    sub1: Modul untuk aplikasi web selain PHP
+    sub2: Semua bahasa aplikasi bisa digunakan di DOM Cloud!
+    img: /assets/passenger.png
+  - title: Python
+    sub1: Toolset multi-versi Python 3 termasuk Instalasi Pip
+    sub2: Django? Flask? Jupyter Notebook? Bisa diatur.
+    img: /assets/python.png
+  - title: Node.JS
+    sub1: Toolset Node.JS termasuk Instalasi NPM dan Yarn
+    sub2: Express? Hugo? Gatsby? Next.js? Bisa diatur.
+    img: /assets/nodejs.png
+  - title: Ruby
+    sub1: Toolset Ruby termasuk Instalasi Bundler dan Gem
+    sub2: Ruby on Rails? Framework lainnya? Bisa diatur.
+    img: /assets/ruby.png
+  - title: Banyak bahasa lainnya
+    sub1: Go, Rust, Deno, C++, bahasa apapun bisa.
+    sub2: Menggunakan Phusion Passenger GLS tentunya
+    img: /assets/gls.png
+benefits:
+  - title: Mulai Gratis!
+    sub1: Tanpa trial, tanpa kartu kredit, cukup langsung bikin
+    sub2: Untuk eksperimen, koleksi atau coba-coba pun boleh
+    icon: fas fa-gem
+  - title: Full Akses Remote
+    sub1: Akses SSH, FTP, MySQL dari aplikasi di PC mu.
+    sub2: Bisa juga diakses melalui tool online kok.
+    icon: fas fa-scroll
+  - title: Deployment Script
+    sub1: Jalankan perintah SSH berulang-ulang tanpa perlu membuka terminal lagi
+    sub2: Bisa juga digunakan untuk template atau script instalasi tentunya
+    icon: fas fa-cogs
+  - title: Teroptimasi Otomatis
+    sub1: HTTP/2, Gzip, TLS v1.3, HTTP Cache nyala by default
+    sub2: Skor performa tinggi di lighthouse
+    icon: fas fa-shipping-fast
+  - title: Firewall
+    sub1: Proteksi data server apabila terjadi kebobolan data
+    sub2: Fitur firewall built-in mencegah server berkomunikasi ke pihak yang tidak diinginkan
+    icon: fas fa-shield-alt
+  - title: Multi Lokasi Server
+    sub1: Pilih lokasi server yang dekat dengan target audiens website.
+    sub2: Server yang tersedia di lokasi Singapura dan US New York.
+    icon: fas fa-globe
+  - title: Banyak Metode Pembelian
+    sub1: Menggunakan layanan pembayaran pihak ketiga, bisa bayar dimana saja.
+    sub2: Bank VA, Gerai Indomart/Alfamat, QRIS (OVO, Gopay, Dana, dll), dan PayPal
+    icon: fas fa-store-alt
+  - title: Community Based
+    sub1: Tanya-tanya soal hosting atau fitur DOM Cloud melalui GitHub
+    sub2: Juga bisa loh kalian lihat under-the-hood layanan ini, karena DOM Cloud memang Open Source!
+    icon: fas fa-users

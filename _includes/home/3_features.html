@@ -17,221 +17,37 @@
 <p class="h4 my-5 text-center" id="features">Lebih dari sekedar layanan hosting</p>
 <div class="container-fluid">
     <div class="row g-0 align-items-center text-left justify-content-center">
+        {% for i in site.data.features.softwares %}
         <div class="col-sm-6 mb-2">
             <div class="d-flex">
-                <img src="/assets/virtualmin.png" style="height: 180px; width: 200px; object-fit: contain;">
+                <img src="{{ i.img }}" style="height: 180px; width: 200px; object-fit: contain;">
                 <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Virtualmin Panel</div>
-                    <div class="ia">Kelola file server secara interaktif</div>
-                    <div class="ib">cPanel-like, tapi lebih user-friendly</div>
+                    <div class="h4 my-2">{{ i.title }}</div>
+                    <div class="ia">{{ i.sub1 }}</div>
+                    <div class="ib">{{ i.sub2 }}</div>
                 </div>
             </div>
         </div>
-
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <img src="/assets/nginx.png" style="height: 180px; width: 200px; object-fit: contain;">
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Nginx Webserver</div>
-                    <div class="ia">Atur konfigurasi webserver dengan mudah</div>
-                    <div class="ib">Jauh lebih cepat dan mudah daripada Apache</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <img src="/assets/letsencrypt.png" style="height: 180px; width: 200px; object-fit: contain;">
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Let's Encrypt</div>
-                    <div class="ia">Koneksi HTTPS secara otomatis</div>
-                    <div class="ib">Tanpa harus membeli sertifikat SSL!</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <img src="/assets/postgresql.png" style="height: 180px; width: 200px; object-fit: contain;">
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">PostgreSQL</div>
-                    <div class="ia">Database modern alternatif MySQL</div>
-                    <div class="ib">MySQL tentu tetap bisa digunakan tentunya</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <img src="/assets/php.png" style="height: 180px; width: 200px; object-fit: contain;">
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">PHP</div>
-                    <div class="ia">Toolset multi-versi PHP termasuk Composer</div>
-                    <div class="ib">Butuh PHP 5.6? 7.4? 8.x? Bisa diatur.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <img src="/assets/passenger.png" style="height: 180px; width: 200px; object-fit: contain;">
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Phusion Passenger</div>
-                    <div class="ia">Modul untuk aplikasi web selain PHP</div>
-                    <div class="ib">Semua bahasa aplikasi bisa digunakan di DOM Cloud!</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <img src="/assets/python.png" style="height: 180px; width: 200px; object-fit: contain;">
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Python</div>
-                    <div class="ia">Toolset multi-versi Python 3 termasuk Instalasi Pip</div>
-                    <div class="ib">Django? Flask? Jupyter Notebook? Bisa diatur.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <img src="/assets/nodejs.png" style="height: 180px; width: 200px; object-fit: contain;">
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Node.JS</div>
-                    <div class="ia">Toolset Node.JS termasuk Instalasi NPM dan Yarn</div>
-                    <div class="ib">Express? Hugo? Gatsby? Next.js? Bisa diatur.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <img src="/assets/ruby.png" style="height: 180px; width: 200px; object-fit: contain;">
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Ruby</div>
-                    <div class="ia">Toolset Ruby termasuk Instalasi Bundler dan Gem</div>
-                    <div class="ib">Ruby on Rails? Framework lainnya? Bisa diatur.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <img src="/assets/gls.png" style="height: 180px; width: 200px; object-fit: contain;">
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Banyak bahasa lainnya</div>
-                    <div class="ia">Go, Rust, Deno, C++, bahasa apapun bisa.</div>
-                    <div class="ib">Menggunakan Phusion Passenger GLS tentunya</div>
-                </div>
-            </div>
-        </div>
-
-
+        {% endfor %}
     </div>
 </div>
-<p class="h4 my-5 text-center">Benefitnya apa saja ya? Banyak!</p>
+<p class="h4 my-5 text-center">What are the benefits? Lots!</p>
 
 <div class="container-fluid">
     <div class="row g-0 align-items-center text-left justify-content-center">
+        {% for i in site.data.features.benefits %}
         <div class="col-sm-6 mb-2">
             <div class="d-flex">
                 <div class="ip">
-                    <i class="fas fa-gem"></i>
+                    <i class="{{ i.icon }}"></i>
                 </div>
                 <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Mulai Gratis!</div>
-                    <div class="ia">Tanpa trial, tanpa kartu kredit, cukup langsung bikin</div>
-                    <div class="ib">Untuk eksperimen, koleksi atau coba-coba pun boleh</div>
+                    <div class="h4 my-2">{{ i.title }}</div>
+                    <div class="ia">{{ i.sub1 }}</div>
+                    <div class="ib">{{ i.sub2 }}</div>
                 </div>
             </div>
         </div>
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <div class="ip">
-                    <i class="fas fa-scroll"></i>
-                </div>
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Full Akses Remote</div>
-                    <div class="ia">Akses SSH, FTP, MySQL dari aplikasi di PC mu.</div>
-                    <div class="ib">Bisa juga diakses melalui tool online kok.</div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <div class="ip">
-                    <i class="fas fa-cogs"></i>
-                </div>
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Deployment Script</div>
-                    <div class="ia">Jalankan perintah SSH berulang-ulang tanpa perlu membuka terminal lagi</div>
-                    <div class="ib">Bisa juga digunakan untuk template atau script instalasi tentunya</div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <div class="ip">
-                    <i class="fas fa-shipping-fast"></i>
-                </div>
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Teroptimasi Otomatis</div>
-                    <div class="ia">HTTP/2, Gzip, TLS v1.3, HTTP Cache nyala by default</div>
-                    <div class="ib">Skor performa tinggi di lighthouse</div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <div class="ip">
-                    <i class="fas fa-shield-alt"></i>
-                </div>
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Firewall</div>
-                    <div class="ia">Proteksi data server apabila terjadi kebobolan data</div>
-                    <div class="ib">Fitur firewall built-in mencegah server berkomunikasi ke pihak yang tidak diinginkan</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <div class="ip">
-                    <i class="fas fa-globe"></i>
-                </div>
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Multi Lokasi Server</div>
-                    <div class="ia">Pilih lokasi server yang dekat dengan target audiens website.</div>
-                    <div class="ib">Server yang tersedia di lokasi Singapura dan US New York.</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <div class="ip">
-                    <i class="fas fa-store-alt"></i>
-                </div>
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Banyak Metode Pembelian</div>
-                    <div class="ia">Menggunakan layanan pembayaran pihak ketiga, bisa bayar dimana saja.</div>
-                    <div class="ib">Bank VA, Gerai Indomart/Alfamat, QRIS (OVO, Gopay, Dana, dll), dan PayPal</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-sm-6 mb-2">
-            <div class="d-flex">
-                <div class="ip">
-                    <i class="fas fa-users"></i>
-                </div>
-                <div class="ms-2 d-flex flex-column justify-content-center">
-                    <div class="h4 my-2">Community Based</div>
-                    <div class="ia">Tanya-tanya soal hosting atau fitur DOM Cloud melalui GitHub</div>
-                    <div class="ib">Juga bisa loh kalian lihat under-the-hood layanan ini, karena DOM Cloud memang Open Source!</div>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
 </div>

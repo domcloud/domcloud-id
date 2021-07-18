@@ -1,7 +1,7 @@
 <p class="h4 my-5 text-center" id="installs">Install aplikasi sekali klik disini</p>
 <div class="row g-0 text-center">
     {% for t in site.data.templates %}
-    <div class="col-6 col-md-4 col-lg-3 py-5 text-white" style="background-color: {{ t.color }};">
+    <div class="col-6 col-sm-4 col-md-3 col-xl-2 py-5 text-white" style="background-color: {{ t.color }};">
         <a
             href="https://portal.domcloud.id/start?from=https://raw.githubusercontent.com/domcloud/dom-templates/master/{{ t.link }}">
             <img src="{{ t.icon }}" style="height: 100px; object-fit: contain; filter: contrast(0) brightness(10);">
@@ -10,7 +10,7 @@
     </div>
     {% endfor %}
 
-    <div class="col-6 col-md-4 col-lg-3 py-5 text-white" style="background-color: #181717;">
+    <div class="col-6 col-sm-4 col-md-3 col-xl-2 py-5  py-5 text-white" style="background-color: #181717;">
         <a href="https://portal.domcloud.id/start?wizard=import" style="color: white; font-size: 60px;">
             <i class="fas fa-download"></i>
         </a>
