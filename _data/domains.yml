@@ -1,0 +1,74 @@
+indo:
+- dom: .ID
+  price: 235K
+  req: KTP
+  bg: '#5e5'
+- dom: .CO.ID
+  price: 335K
+  req: KTP, Akta/Izin
+  bg: '#8f8'
+- dom: .MY.ID
+  price: 25K
+  req: KTP
+  bg: '#5e5'
+- dom: .BIZ.ID
+  price: 70K
+  req: KTP
+  bg: '#8f8'
+- dom: .OR.ID
+  price: 70K
+  req: KTP, Akta/Izin
+  bg: '#5e5'
+- dom: .WEB.ID
+  price: 70K
+  req: KTP
+  bg: '#8f8'
+- dom: .AC.ID
+  price: 70K
+  req: KTP, SK, Kuasa
+  bg: '#5e5'
+- dom: .SCH.ID
+  price: 70K
+  req: KTP, SK, Kuasa
+  bg: '#8f8'
+- dom: .PONPES.ID
+  price: 70K
+  req: KTP, SK
+  bg: '#5e5'
+global:
+- dom: .COM
+  price: 160K
+  renew: 160K
+  bg: '#8f8'
+- dom: .NET
+  price: 200K
+  renew: 200K
+  bg: '#5e5'
+- dom: .ORG
+  price: 155K
+  renew: 200K
+  bg: '#8f8'
+- dom: .BIZ
+  price: 255K
+  renew: 255K
+  bg: '#5e5'
+- dom: .XYZ
+  price: 25K
+  renew: 175K
+  bg: '#8f8'
+- dom: .SITE
+  price: 35K
+  renew: 415K
+  bg: '#5e5'
+- dom: .ONLINE
+  price: 35K
+  renew: 515K
+  bg: '#8f8'
+- dom: .TECH
+  price: 55K
+  renew: 710K
+  bg: '#5e5'
+- dom: .INFO
+  price: 75K
+  renew: 240K
+  bg: '#8f8'

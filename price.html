@@ -8,11 +8,10 @@ color: '#50c'
 
 <div class="text-center">
   <div class="jumbotron bg top fixed text-white" style="
-      --bg: url(https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1056&q=80);
+      --bg: url(https://images.unsplash.com/photo-1601248543571-bf246689c301?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1056&q=80);
       background-color: #50c;
     ">
     <h1 class="display-4">Daftar Harga Paket Hosting</h1>
-    <div class="text-sm">Manakah paket hosting yang cocok untuk anda?</div>
   </div>
   <div class="container my-5">
     <div class="row">
@@ -40,36 +39,93 @@ color: '#50c'
 
 </div>
 
-<div class="container">
-  <div class="card">
-    <div class="card-body">
-      <h3 class="text-center">Multi Lokasi Server</h3>
-      <div style="position: relative;">
-        <img src="/assets/worldmap.png" class="w-100" alt="">
-        <a href="#sga" style="position: absolute;
-            top: 57.3%;
-            left: 75.8%;
-            font-size: 30px;
-            transform: translate(-11px, -45px);" data-bs-toggle="popover" data-bs-trigger="focus"  title="SGA Server"
-          data-bs-content="CNAME: sga.domcloud.id,&lt;br&gt; DEFAULT DOMAIN: *.dom.my.id" data-bs-html="true">
-          <i class="fas fa-map-marker-alt"></i>
-        </a>
-        <a href="#nyc" style="position: absolute;
-          top: 31.5%;
-          left: 27.8%;
-          font-size: 30px;
-          transform: translate(-11px, -45px);" data-bs-toggle="popover" data-bs-trigger="focus"  title="NYC Server"
-          data-bs-content="CNAME: nyc.domcloud.id,&lt;br&gt; DEFAULT DOMAIN: *.domcloud.io" data-bs-html="true">
-          <i class="fas fa-map-marker-alt"></i>
-        </a>
-      </div>
+<div class="text-center" id="domain">
+  <div
+    class="jumbotron bg top fixed text-white"
+    style="
+      --bg: url(https://images.unsplash.com/photo-1551970634-747846a548cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+      background-color: #353;
+    "
+  >
+    <h1 class="display-4">Daftar Harga Domain</h1>
+  </div>
 
+  <div class="my-5">
+    <p class="h1 text-success">Domain Indonesia</p>
+    <p>
+      <small
+        ><a
+          href="https://dok.dom.my.id/domain/tld.html"
+          style="color: green; font-weight: bold; text-decoration: none"
+          >Lihat persyaratan dokumen untuk domain Indonesia</a
+        ></small
+      >
+    </p>
+  </div>
+
+  <div class="row g-0">
+    {% for d in site.data.domains.indo %}
+    <div
+      class="p-4 col-md-4"
+      style="background-color: {{ d.bg }}"
+    >
+      <div class="h2 card-title my-auto">{{ d.dom }}</div>
+      <div class="display-4 my-2">{{ d.price }}</div>
+      <h6 class="text-muted">Per Tahun</h6>
+      <h6 class="small">Syarat: {{ d.req }}</h6>
     </div>
+    {% endfor %}
+  </div>
+
+  <div class="my-5">
+    <p class="h1 text-success">Top Level Domain</p>
+  </div>
+
+  <div class="row g-0">
+    {% for d in site.data.domains.global %}
+    <div class="col-lg-4 text-left">
+      <div
+        class="px-4 py-4 d-flex justify-content-between align-items-end"
+        style="background-color: {{ d.bg }}"
+      >
+        <div class="h2 card-title my-auto" style="width: 4em">{{ d.dom }}</div>
+        <div>
+          <div class="display-4">{{ d.price }}</div>
+          <h6 class="text-muted">Beli</h6>
+        </div>
+        <div>
+          <div class="h5">{{ d.renew }}</div>
+          <h6 class="text-muted">Perpanjang</h6>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="p-4">
+    <p>
+      <a
+        class="btn btn-lg btn-success"
+        href="https://portal.domcloud.id/id/register"
+        >Daftar Sekarang</a
+      >
+    </p>
   </div>
 </div>
 
+
+<div class="text-center" id="domain">
+  <div
+    class="jumbotron bg top fixed text-white"
+    style="
+      --bg: url(https://images.unsplash.com/photo-1560961911-293cfd783727?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+      background-color: #fe3;
+    "
+  >
+    <h1 class="display-4">FAQ</h1>
+  </div>
+
 <div class="p-5">
-  <h2 class="mb-3 text-center">FAQ</h2>
   <div class="row">
     {% for faqrow in site.data.faqs %}
     <div class="col-md-4">
@@ -91,14 +147,8 @@ color: '#50c'
     </div>
     {% endfor %}
   </div>
-  <p class="mt-2 text-center">
-    <a class="btn btn-lg btn-warning" href="https://portal.domcloud.id/id/register">Daftar Sekarang</a>
-  </p>
-  <script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-      var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
-      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-        return new bootstrap.Popover(popoverTriggerEl)
-      })
-    });
-  </script>
+</div>
+
+<p class="mt-2 text-center">
+  <a class="btn btn-lg btn-warning" href="https://portal.domcloud.id/id/register">Daftar Sekarang</a>
+</p>
