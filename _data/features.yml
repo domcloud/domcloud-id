@@ -2,43 +2,43 @@ softwares:
   - title: Virtualmin Panel
     sub1: Kelola file server secara interaktif
     sub2: cPanel-like, tapi lebih user-friendly
-    img: /assets/virtualmin.png
+    img: /assets/feat/virtualmin.png
   - title: Nginx Webserver
     sub1: Atur konfigurasi webserver dengan mudah
     sub2: Jauh lebih cepat dan mudah daripada Apache
-    img: /assets/nginx.png
+    img: /assets/feat/nginx.png
   - title: Let's Encrypt
     sub1: Koneksi HTTPS secara otomatis
     sub2: Tanpa harus membeli sertifikat SSL!
-    img: /assets/letsencrypt.png
+    img: /assets/feat/letsencrypt.png
   - title: PostgreSQL
     sub1: Database modern alternatif MySQL
     sub2: MySQL tentu tetap bisa digunakan tentunya
-    img: /assets/postgresql.png
+    img: /assets/feat/postgresql.png
   - title: PHP
     sub1: Toolset multi-versi PHP termasuk Composer
     sub2: Butuh PHP 5.6? 7.4? 8.x? Bisa diatur.
-    img: /assets/php.png
+    img: /assets/feat/php.png
   - title: Phusion Passenger
     sub1: Modul untuk aplikasi web selain PHP
     sub2: Semua bahasa aplikasi bisa digunakan di DOM Cloud!
-    img: /assets/passenger.png
+    img: /assets/feat/passenger.png
   - title: Python
     sub1: Toolset multi-versi Python 3 termasuk Instalasi Pip
     sub2: Django? Flask? Jupyter Notebook? Bisa diatur.
-    img: /assets/python.png
+    img: /assets/feat/python.png
   - title: Node.JS
     sub1: Toolset Node.JS termasuk Instalasi NPM dan Yarn
     sub2: Express? Hugo? Gatsby? Next.js? Bisa diatur.
-    img: /assets/nodejs.png
+    img: /assets/feat/nodejs.png
   - title: Ruby
     sub1: Toolset Ruby termasuk Instalasi Bundler dan Gem
     sub2: Ruby on Rails? Framework lainnya? Bisa diatur.
-    img: /assets/ruby.png
+    img: /assets/feat/ruby.png
   - title: Banyak bahasa lainnya
     sub1: Go, Rust, Deno, C++, bahasa apapun bisa.
     sub2: Menggunakan Phusion Passenger GLS tentunya
-    img: /assets/gls.png
+    img: /assets/feat/gls.png
 benefits:
   - title: Mulai Gratis!
     sub1: Tanpa trial, tanpa kartu kredit, cukup langsung bikin
