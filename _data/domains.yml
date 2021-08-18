@@ -39,36 +39,75 @@ global:
 - dom: .COM
   price: 160K
   renew: 160K
+  for: Commercial
   bg: '#8f8'
 - dom: .NET
   price: 200K
   renew: 200K
+  for: Networking
   bg: '#5e5'
 - dom: .ORG
   price: 155K
   renew: 200K
+  for: Organization
   bg: '#8f8'
 - dom: .BIZ
   price: 255K
   renew: 255K
+  for: Business
   bg: '#5e5'
 - dom: .XYZ
   price: 25K
   renew: 175K
+  for: Unique
   bg: '#8f8'
 - dom: .SITE
   price: 35K
   renew: 415K
+  for: Simple
   bg: '#5e5'
 - dom: .ONLINE
   price: 35K
   renew: 515K
+  for: Online
   bg: '#8f8'
 - dom: .TECH
   price: 55K
   renew: 710K
+  for: Technology
   bg: '#5e5'
 - dom: .INFO
   price: 75K
   renew: 240K
+  for: Information
+  bg: '#8f8'
+- dom: .IO
+  price: 910K
+  renew: 910K
+  for: Startup
+  bg: '#5e5'
+- dom: .PRO
+  price: 85K
+  renew: 275K
+  for: Professional
+  bg: '#8f8'
+- dom: .SHOP
+  price: 135K
+  renew: 495K
+  for: Shopping
+  bg: '#5e5'
+- dom: .LIVE
+  price: 55K
+  renew: 335K
+  for: Livestream
+  bg: '#8f8'
+- dom: .NEWS
+  price: 335K
+  renew: 335K
+  for: News
+  bg: '#5e5'
+- dom: .AGENCY
+  price: 295K
+  renew: 295K
+  for: Agency
   bg: '#8f8'
