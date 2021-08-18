@@ -39,32 +39,32 @@ global:
 - dom: .COM
   price: 160K
   renew: 160K
-  for: Commercial
+  for: Komersil
   bg: '#8f8'
 - dom: .NET
   price: 200K
   renew: 200K
-  for: Networking
+  for: Jaringan
   bg: '#5e5'
 - dom: .ORG
   price: 155K
   renew: 200K
-  for: Organization
+  for: Organisasi
   bg: '#8f8'
 - dom: .BIZ
   price: 255K
   renew: 255K
-  for: Business
+  for: Bisnis
   bg: '#5e5'
 - dom: .XYZ
   price: 25K
   renew: 175K
-  for: Unique
+  for: Unik
   bg: '#8f8'
 - dom: .SITE
   price: 35K
   renew: 415K
-  for: Simple
+  for: Sederhana
   bg: '#5e5'
 - dom: .ONLINE
   price: 35K
@@ -74,12 +74,12 @@ global:
 - dom: .TECH
   price: 55K
   renew: 710K
-  for: Technology
+  for: Teknologi
   bg: '#5e5'
 - dom: .INFO
   price: 75K
   renew: 240K
-  for: Information
+  for: Informasi
   bg: '#8f8'
 - dom: .IO
   price: 910K
@@ -89,12 +89,12 @@ global:
 - dom: .PRO
   price: 85K
   renew: 275K
-  for: Professional
+  for: Profesional
   bg: '#8f8'
 - dom: .SHOP
   price: 135K
   renew: 495K
-  for: Shopping
+  for: Belanja
   bg: '#5e5'
 - dom: .LIVE
   price: 55K
@@ -104,10 +104,10 @@ global:
 - dom: .NEWS
   price: 335K
   renew: 335K
-  for: News
+  for: Berita
   bg: '#5e5'
 - dom: .AGENCY
   price: 295K
   renew: 295K
-  for: Agency
+  for: Agensi
   bg: '#8f8'
