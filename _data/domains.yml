@@ -37,8 +37,8 @@ indo:
   bg: '#5e5'
 global:
 - dom: .COM
-  price: 160K
-  renew: 160K
+  price: 170K
+  renew: 170K
   for: Komersil
   bg: '#8f8'
 - dom: .NET
@@ -57,8 +57,8 @@ global:
   for: Bisnis
   bg: '#5e5'
 - dom: .XYZ
-  price: 25K
-  renew: 175K
+  price: 185K
+  renew: 185K
   for: Unik
   bg: '#8f8'
 - dom: .SITE
