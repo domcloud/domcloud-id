@@ -4,8 +4,8 @@ layout: docs
 
 ## Configuring Custom Domain
 
-In most cases you might prefer custom domain rather than using the default `*.domcloud.io`. Configuring custom domain requires Lite Plan or more.
+Dalam kebanyakan kasus, anda mungkin lebih memilih domain khusus dari pada menggunakan  `*.domcloud.io`. untuk mensetting domain anda perlu membeli paket lite atau paket di atasnya .
 
-You can use your own existing domain or purchase new one.
+Anda dapat menggunakan domain Anda sendiri yang sudah ada atau membeli yang baru.
 
-> Custom DNS management currently only work in SGA and NYC servers
+> Untuk penyesuaian manajemen DNS saat ini hanya berfungsi di server Singapura dan New York
