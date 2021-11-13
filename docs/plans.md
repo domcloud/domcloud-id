@@ -2,11 +2,11 @@
 layout: docs
 ---
 
-## Feature Pricing
+## Harga Fitur
 
-DOM Cloud features a free plan where you can try for up to 256 MB storage size. To unlock for additional size or custom domain you can subscribe for as low as 5 USD a year. See our pricing page for more details.
+DOM Cloud memiliki paket gratis dimana Anda dapat mencoba ukuran penyimpanan hingga 256 MB. Untuk menambah kapasitas penyimpanan atau menggunakan domain khusus, Anda dapat berlangganan mulai dari 50 ribu dalam setahun. Untuk lebih jelasnya anda dapat melihat harga dibawah ini.
 
-Here's quick table for reference:
+Berikut ini tabel untuk refrensi anda:
 
 | Feature | Freedom | Lite  | Kit | Pro | Super | Ultimate |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|
