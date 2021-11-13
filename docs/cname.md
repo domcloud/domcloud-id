@@ -2,9 +2,9 @@
 layout: docs
 ---
 
-## Configuring Custom Domain
+## Setting Domain Custom
 
-Dalam kebanyakan kasus, anda mungkin lebih memilih domain khusus dari pada menggunakan  `*.domcloud.io`. untuk mensetting domain anda perlu membeli paket lite atau paket di atasnya .
+Dalam kebanyakan kasus, anda mungkin lebih memilih domain khusus dari pada menggunakan `*.domcloud.io`. untuk mensetting domain anda perlu membeli paket lite atau paket di atasnya .
 
 Anda dapat menggunakan domain Anda sendiri yang sudah ada atau membeli yang baru.
 
