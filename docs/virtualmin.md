@@ -2,10 +2,10 @@
 layout: docs
 ---
 
-## Manage servers with Virtualmin Panel
+## Mengelola Server Dengan Virtualmin Panel
 
-The Virtualmin Panel gives you ability to manage files, subservers and databases.
+Virtualmin Panel memberi Anda kemampuan untuk mengelola file, sub server dan data base.
 
-Here are an introduction video to demonstrate its UI features.
+Berikut ini adalah video tentang pengantar mendemonstrasikan fitur UI-nya.
 
 <iframe width="100%" height="500px" src="https://www.youtube.com/embed/OENyJFI_w0Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
