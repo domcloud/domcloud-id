@@ -8,7 +8,7 @@ DOM Cloud memiliki paket gratis dimana Anda dapat mencoba ukuran penyimpanan hin
 
 Berikut ini tabel untuk refrensi anda:
 
-| Feature | Freedom | Lite  | Kit | Pro | Super | Ultimate |
+| Paket | Freedom | Lite  | Kit | Pro | Super | Ultimate |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|
 | Storage | 256 MB | 1 GB | 2 GB | 4 GB | 7 GB | 10 GB |
 | Bandwidth | 12 GB | 45 GB | 75 GB | 150 GB | 450 GB | 1500 GB |
@@ -18,27 +18,27 @@ Berikut ini tabel untuk refrensi anda:
 | Multi Account | ⛔ | ⛔ | ⛔ | ⛔ | 25 | 50 |
 {: .table}
 
-The free plan has no time limit. However to prevent spam you have to reactivate every two months by logging in to portal and perform extension.
+Paket gratis tidak memiliki batas waktu. Namun untuk mencegah spam Anda harus mengaktifkan kembali setiap dua bulan dengan masuk ke portal dan melakukan ekstensi.
 
-Here are some common question about choosing the right plan for the budget:
+Berikut ini adalah beberapa pertanyaan umum tentang pemilihan rencana anggaran :
 
-### What is a Subserver
+### Apa itu Subserver
 
-A subserver is essentially a separate host with files contents.
+Subserver pada dasarnya adalah host terpisah dengan konten file.
 
-### What are benefits of using paid Plans?
+### Apa manfaat menggunakan Paket berbayar?
 
-Paid plans is available to purchase using PayPal, and using these gains your hosting additional features:
-+ No more 2 month limit expiration
-+ Can use any custom domain you want
-+ DNS feature can be turned on
-+ Can purchase additional network bandwidth
-+ Can never be accidentally deleted (until it expires)
+Paket berbayar tersedia untuk dibeli menggunakan PayPal, dan menggunakan fitur-fitur tambahan hosting Anda berikut ini:
++ Tidak ada lagi batas kedaluwarsa 2 bulan
++ Anda dapat menggunakan domain khusus apa pun yang Anda inginkan
++ Fitur DNS dapat diaktifkan
++ Dapat membeli bandwidth jaringan tambahan
++ Tidak terhapus secara tidak sengaja (sampai habis masa berlakunya)
 
 
-### Can I switch plan later?
+### Bisakah saya beralih paket nanti?
 
-Yes, you can upgrade from free plan to any paid plan anytime. You can also upgrade or purchase additional bandwidth quota after you bought your initial plan.
+Ya, Anda dapat meningkatkan dari paket gratis ke paket berbayar kapan saja. Anda juga dapat meningkatkan atau membeli kuota bandwidth tambahan setelah Anda membeli paket awal..
 
-However, during your paid plan term, you can't downgrade unless it's nearly expiring (in under 1 month). For technical reasons right now you can't ever go back to free plan if you have already purchased a paid plan before.
+Namun, selama jangka waktu paket berbayar Anda, Anda tidak dapat menurunkan versi kecuali hampir kedaluwarsa (dalam waktu kurang dari 1 bulan). Untuk alasan teknis saat ini Anda tidak dapat kembali ke paket gratis jika Anda telah membeli paket berbayar sebelumnya.
 
