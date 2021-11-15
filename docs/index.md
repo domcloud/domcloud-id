@@ -2,9 +2,9 @@
 layout: docs
 ---
 
-# Welcome to DOM Cloud Documentation
+# Selamat Datang di Dokumentasi DOM Cloud
 
-We use GitHub for [Issue Tracking](https://github.com/domcloud/domcloud-io/issues) and [Discussions](https://github.com/domcloud/domcloud-io/discussions). For private inquiries please send an email to [support@domcloud.id](mailto:support@domcloud.id).
+Kami menggunakan GitHub untuk [Melacak Masalah](https://github.com/domcloud/domcloud-io/issues) dan [Diskusi](https://github.com/domcloud/domcloud-io/discussions). Untuk pertanyaan pribadi, silakan kirim email ke [support@domcloud.id](mailto:support@domcloud.id).
 
 ## What is DOM Cloud? And why?
 
