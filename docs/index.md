@@ -6,83 +6,81 @@ layout: docs
 
 Kami menggunakan GitHub untuk [Melacak Masalah](https://github.com/domcloud/domcloud-io/issues) dan [Diskusi](https://github.com/domcloud/domcloud-io/discussions). Untuk pertanyaan pribadi, silakan kirim email ke [support@domcloud.id](mailto:support@domcloud.id).
 
-## What is DOM Cloud? And why?
+## Apa itu DOM Cloud? Dan mengapa?
 
-It's a platform-as-a-service to host your content to the internet using shared virtual machine. Basically, DOM Cloud is similar like hosting providers out in the wild, but very customizable to modern apps.
+Ini adalah platform sebagai layanan untuk meng-hosting konten Anda ke internet menggunakan virtual machine. Pada dasarnya, DOM Cloud mirip seperti penyedia hosting lainya, tetapi sangat sesuaikan untuk aplikasi modern.
 
-DOM Cloud servers is available in NYC (New York City), SGA (Singapore), JPN (Japan). All servers have default domain to `*.domcloud.io`.
+Server DOM Cloud tersedia di NYC (New York City), SGA (Singapura), JPN (Jepang). Semua server memiliki domain default yaitu `*.domcloud.io`.
 
-For an overview, DOM Cloud let's you to:
+Untuk gambaran umum, DOM Cloud memungkinkan Anda untuk:
 
-+ Host PHP or Non-PHP web apps
-+ Manage MySQL or PostgreSQL Database
-+ Run an existing web apps using script deployments
-+ Sync your deployed web app with GitHub
+- Host aplikasi web PHP atau Non-PHP
+- Kelola Database MySQL atau PostgreSQL
+- Menjalankan aplikasi web yang ada menggunakan menggunakan script deployments
+- mensinkronkan aplikasi pengembangan web Anda gunakan dengan GitHub
 
 To understand why DOM Cloud exist, we need to compare with existing hosting solutions...
 
+### Untuk Memahami Mengapa DOM Cloud ada, kita perlu membandingkan dengan hosting yang ada...
 
-### Comparing with other shared hosting providers
+hosting lainya yang ada biasanya menggunakan Apache (atau \[Open\]LiteSpeed). Apache berkembang pesat dalam bisnis hosting karena portabilitas file konfigurasi dalam bentuk file `.htaccess`. Memang benar bahwa Apache adalah pilihan yang umum, tetapi saat ini, telah dilampaui dengan NginX.
 
-Existing shared hosting solutions commonly uses Apache (or \[Open\]LiteSpeed). Apache thrives in hosting businesses because the portability of configuration files in form of `.htaccess` files. It was true that Apache was a common choice, but nowadays, it has been surpassed with NginX.
+NginX memberikan kinerja yang lebih baik dan kesederhanaan konfigurasi untuk situs web modern. Di era Apache, PHP adalah pilihan yang jelas untuk digunakan dalam pengembangan situs web, terutama dengan WordPress yang menguasai 37% internet. Tetapi hari ini, kami memiliki banyak hal yang dibangun dengan berbagai bahasa seperti Node.JS, Ruby, Go atau Python. NginX sekarang adalah untuk ini, dan sekitar 2019, NginX melampaui penggunaan global di atas Apache.
 
-NginX delivers better performance and simplicity of configuration for modern websites. In Apache era, PHP was the obvious choice to go with website development, especially with WordPress which what powers 37% of the internet. But today, we have things build with variety of languages like Node.JS, Ruby, Go or Python. NginX now is go to for these, and around 2019, NginX surpasses global usage over Apache.
+Tidak seperti penyedia hosting umum, DOM Cloud menggunakan NginX dan dapat menghosting aplikasi non-PHP Anda bahkan secara gratis. Lebih baik lagi, Anda juga dapat menggunakan Postgres melalui MariaDB (MySQL) jika Anda menginginkannya (kami mendukung keduanya).
 
-Unlike common hosting providers, DOM Cloud uses NginX and can host your non-PHP apps even for free. Even better, you can also use Postgres over MariaDB (MySQL) if you prefer that (we support both).
+### Perbandingan serverless hosting providers
 
-### Comparing with serverless hosting providers
+[Serverless hosting](https://en.wikipedia.org/wiki/Serverless_computing) providers unggul dalam kinerja web karena dapat direplikasi di seluruh dunia. Namun dengan kemampuan replikasi tersebut, server web harus "stateless" atau "tidak dapat diubah", yang berarti Anda tidak dapat menggunakan file lokal untuk apa pun dan koneksi terus-menerus seperti WebSocket tidak mungkin. Selain itu, serverless deployments dari AWS memiliki batas ukuran server moderat 256 MB.
 
-[Serverless hosting](https://en.wikipedia.org/wiki/Serverless_computing) providers is superior in web performance because it can be replicated across the globe. However with those replication ability, the web server has to be "stateless" or "immutable", which means you can't use local files for anything and persistent connection like WebSocket is simply impossible. Also, serverless deployments from AWS has a moderate server size limit of 256 MB.
+Ini sebagian besar baik untuk bahasa modern, tetapi untuk bahasa lama yang sangat bergantung pada operasi file seperti PHP, sangat sulit untuk mulai bekerja. Pada dasarnya Anda juga harus mengandalkan solusi eksternal untuk menyimpan database atau bahkan sesi data. Tergantung pada skala proyek Anda, serverless mungkin merupakan pilihan yang tepat, atau mungkin tidak.
 
-This is mostly fine for modern languages, but for old languages which very reliant with file operations like PHP, it's very tricky to get to work. Essentially you also have to rely on external solutions to store database or even data sessions. Depending on the scale of your project, serverless maybe the right choice, or maybe not.
+DOM Cloud adalah solusi hosting bersama dan _statelessness_ atau _immutability_ bukanlah persyaratan. Anda dapat memeriksa dan mengedit file di tempat, menyiapkan tugas cron, atau melakukan debug cepat dengan SSH dalam produksi.
 
-DOM Cloud is a shared hosting solution and *statelessness* or *immutability* is not a requirement. You can examine and edit files in place, setup a cron job, or perform quick debug with SSH in production.
+## Untuk memulai
 
-## Getting Started
+Anda dapat mulai menghosting situs web dari [portal](https://portal.domcloud.id/en/login). Kemudian:
 
-You can start hosting websites from [the portal](https://portal.domcloud.id/en/login). Then:
+1. Buat akun atau login
+2. Klik "Orde Baru", ini akan membuka formulir untuk membuat host baru.
+3. Pilih Username, ini juga akan digunakan pada nama domain default dengan postfix `.domcloud.io`
+4. Pilih lokasi Server, pilih lokasi terdekat dari audiens target Anda
+5. Pilih template. Anda dapat membiarkannya menjadi proyek kosong, mulai dari template (seperti WordPress) atau kerangka kerja lainnya.
+6. Jika Anda setuju dengan paket gratis, lewati ke langkah 9, jika tidak, lanjutkan membaca...
+7. Pilih paket. Paket selain gratis akan memberi Anda pilihan untuk memilih domain khusus
+8. Pilih jenis domain, biarkan default, gunakan domain yang ada atau beli yang baru.
+9. Cek total harga, lalu klik "Order Now".
+10. Hosting Anda akan segera dimulai atau setelah pembayaran.
 
-1. Create an account or login
-2. Click "New Order", this will open a form to create a new host.
-3. Choose Username, this will also be used on the default domain name with postfix `.domcloud.io`
-4. Choose Server location, choose the closest location from your target audience
-5. Choose template. You can leave it an empty project, start from template (like WordPress) or other frameworks.
-6. If you okay with free plan, skip ahead to step 9, otherwise continue read on...
-7. Select plan. Plan other than free will give you choice to choose custom domain
-8. Select domain type, either leave default, use existing domain or buy new one.
-9. Check the total price, then click "Order Now".
-10. Your hosting will be started right away or after payment.
+## Manajeman Hosts
 
-## Managing Hosts
+Berikut menu yang tersedia:
 
-Here are menus available:
-
-+ Info: Basic information and stats about the host (showing host IP, storage and bandwidth used)
-+ Manage: Authentication page to manage host data (opening gate to Virtualmin/DB/SSH/FTP)
-+ Deploy: Deploy management and script runner (for automating instalation and other tasks)
-+ Check:
-  + Invoice: Check payment status and remaining grace time
-  + DNS: Check and Identify common problems with DNS
-  + Firewall: Check firewall option
-  + Nginx: Check and change NginX configuration or logs
-  + Passenger: Check Passenger App Status and Logs
-+ Admin:
-  + Change Username
-  + Change Domain
-  + Upgrade
-  + Extend
-  + Transfer
-  + Delete
+- Info: Informasi dasar dan statistik tentang host (menunjukkan IP host, penyimpanan, dan bandwidth yang digunakan)
+- Manage: Halaman otentikasi untuk mengelola data host (pembuka gerbang ke Virtualmin/DB/SSH/FTP)
+- Deploy: Deploy management dan skrip runner (untuk mengotomatiskan instalasi dan tugas lainnya)
+- Check:
+  - Invoice: Memeriksa status pembayaran dan sisa waktu tenggang
+  - DNS: Memeriksa dan Identifikasi masalah umum dengan DNS
+  - Firewall:Memeriksa opsi firewall
+  - Nginx: Memeriksa dan ubah konfigurasi atau log NginX
+  - Passenger: Memeriksa Status dan Log
+- Admin:
+  - Change Username
+  - Change Domain
+  - Upgrade
+  - Extend
+  - Transfer
+  - Delete
 
 ## Virtualmin
 
-The Virtualmin portal gives you ability to manage files, subservers and databases.
+portal virtualmin memberi Anda kemampuan untuk mengelola file, subserver, dan database.
 
-The [Virtualmin page](/docs/virtualmin) explains things you can do with it.
+The [Virtualmin page](/docs/virtualmin) menjelaskan hal-hal yang dapat Anda lakukan dengannya.
 
 ## SSH
 
-SSH access is available for all plans and you can either use your local SSH client or use WebSSH. SSH is useful you want to execute certain software using CLI or Bash interface.
+Akses SSH tersedia untuk semua paket dan Anda dapat menggunakan klien SSH lokal atau menggunakan WebSSH. SSH berguna jika Anda ingin menjalankan perangkat lunak tertentu menggunakan antarmuka CLI atau Bash.
 
-You can also use [the runner script](/docs/runner) to automate certain tasks that you usually do with SSH.
-
+Anda juga dapat menggunakan [the runner script](/docs/runner) untuk mengotomatiskan tugas-tugas tertentu yang biasanya Anda lakukan dengan SSH.
