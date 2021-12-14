@@ -2,45 +2,44 @@
 layout: docs
 ---
 
-# Tips and Troubleshooting
+# Tips dan Pemecahan masalah
 
-## Common Tips and Good Practices
+## Tips Umumnya dan Praktek
 
 #### Portal
 
-+ The runner script is available as the alternative way to manage things in Virtualmin, even for things that didn't available there, like configuring NginX or Firewall.
-+ The runner script is capable to be triggered with GitHub Actions CI, useful for auto-syncing host code with GitHub repo.
-+ We don't serve email transactions, however you can use third-party
+- Skrip runner tersedia sebagai cara alternatif untuk mengelola berbagai hal di Virtualmin, bahkan untuk hal-hal yang tidak tersedia di sana, seperti mengonfigurasi NginX atau Firewall.
+- Skrip runner dapat dipicu dengan GitHub Actions CI, berguna untuk menyinkronkan kode host secara otomatis dengan repo GitHub.
+- Kami tidak melayani transaksi email, namun Anda dapat menggunakan pihak ketiga.
 
 #### NginX
 
-+ Use `ssl: enforce` to redirect all insecure traffic to secure one.
-+ NginX alone is capable of creating `E-Tag` cache to speed up static files delivery.
-+ We have built-in bursted rate-limit of 50 requests for 3 requests/seconds in each IP address.
+- Gunakana `ssl: enforce` untuk mengalihkan semua lalu lintas yang tidak aman ke yang aman.
+- NginX sendiri mampu membuat `E-Tag` cache untuk mempercepat pengiriman file statis.
+- Kami memiliki batas kecepatan burst bawaan dari 50 permintaan untuk 3 permintaan/detik di setiap alamat IP.
 
 #### PHP-FPM
 
-+ You can choose PHP version either from Virtualmin or runner script.
-+ To configure `php.ini`, create `.user.ini` file in the public root path.
-+ Default upload size is `8MB`, increase it by set `upload_max_filesize` and `post_max_size` in `php.ini`.
-+ Any fatal error in PHP will result in blank `500` error. You can enable error reporting by set `display_errors` to 1 in `php.ini`, but this is not recommended.
-+ When installing depedencies with composer, use `--no-cache` to avoid wasted storage by caches.
+- Anda dapat memilih versi PHP baik dari Virtualmin atau skrip runner.
+- Untuk mengonfigurasi `php.ini`, buat `.user.ini` file di jalur root publik.
+- Ukuran unggahan default adalah `8MB`, tingkatkan dengan set `upload_max_filesize` dan `post_max_size` di `php.ini`.
+- Setiap kesalahan fatal dalam PHP akan menghasilkan kosong `500` error. Anda dapat mengaktifkan pelaporan kesalahan dengan mengatur `display_errors` menjadi 1 di `php.ini`, tapi ini tidak direkomendasikan.
+- Saat memasang dependensi dengan composer, gunakan `--no-cache` untuk menghindari penyimpanan yang terbuang oleh cache.
 
 #### Python
 
-+ `python` and `pip` is referred as latest Python 3. We have no support of Python 2.
-+ When installing depedencies with pip, always use `--user` otherwise you will get install error because of sudo requirements.
+- `python` dan `pip` disebut sebagai Python 3. Kami tidak mendukung Python 2.
+- Saat memasang dependensi dengan pip, selalu gunakan `--user` ika tidak, Anda akan mendapatkan kesalahan pemasangan karena persyaratan Sudo.
 
 #### Passenger Phusion
 
-+ Passenger Phusion Node.JS looks for `app.js`, `passenger_wsgi.py` or `config.ru` in parent of root path to start the app.
-+ The GLS feature from Passenger Phusion can start any app, even binary files.
-+ Passenger Phusion Node.JS works with CJS. If your project use ESM you need to use GLS.
-+ Passenger Phusion will be activated if `passenger_enabled on` and no files present in destination path.
-+ You can tell if Phusion is serving a file by checking `server: nginx + Phusion Passenger` HTTP header.
-+ Static files is often better to be handled within NginX alone to make use of `E-Tag` cache.
-+ You can add environment variables by writing in `~/.env` (and use commands like this: `export NODE_ENV=production`)
-
+- Passenger Phusion Node.JS looks for `app.js`, `passenger_wsgi.py` or `config.ru` in parent of root path to start the app.
+- The GLS feature from Passenger Phusion can start any app, even binary files.
+- Passenger Phusion Node.JS works with CJS. If your project use ESM you need to use GLS.
+- Passenger Phusion will be activated if `passenger_enabled on` and no files present in destination path.
+- You can tell if Phusion is serving a file by checking `server: nginx + Phusion Passenger` HTTP header.
+- Static files is often better to be handled within NginX alone to make use of `E-Tag` cache.
+- You can add environment variables by writing in `~/.env` (and use commands like this: `export NODE_ENV=production`)
 
 ## Common Errors Troubleshooting
 
@@ -52,10 +51,10 @@ For Non-PHP (via Phusion Passenger), error logs is not available but if your app
 
 This means that there is a problem with the DNS system. If you are using DOM Cloud make sure:
 
-+ Has fulfilled the requirements / required documents (including email confirmation) from the Registrar.
-+ Already pointing the Name Server correctly (scroll up if not already).
-+ The DNS feature for the server is turned on (set up via webmin).
-+ The A / CNAME records for the intended domain are correct.
+- Has fulfilled the requirements / required documents (including email confirmation) from the Registrar.
+- Already pointing the Name Server correctly (scroll up if not already).
+- The DNS feature for the server is turned on (set up via webmin).
+- The A / CNAME records for the intended domain are correct.
 
 You can [contact us](mailto:support@domcloud.id) if it is still not correct.
 
@@ -69,25 +68,23 @@ If you encounter `ERR_CERTIFICATE_TRANSPARENCY_REQUIRED` after an SSL update, yo
 
 This means that NGINX cannot access the file due to a linux mode setting error in the file. In order to fix this easily you can run this on SSH:
 
-`` bash
-chmod -R 750 ~/
-``
+`bash chmod -R 750 ~/`
 
 #### Nginx Error page `404 Found`
 
 There are 2 possibilities:
 
-+ If this happens for all page URLs, chances are you forgot to set NGINX to [setup index.php](#how-to-install-php-framework) or [turn on passenger mode](#passenger) for non-PHP.
-+ If this happens for only a few files, there may be errors such as typo in the URL, wrong Base URL or not paying attention to the file name size.
-
+- If this happens for all page URLs, chances are you forgot to set NGINX to [setup index.php](#how-to-install-php-framework) or [turn on passenger mode](#passenger) for non-PHP.
+- If this happens for only a few files, there may be errors such as typo in the URL, wrong Base URL or not paying attention to the file name size.
 
 #### Blank page `HTTP Error 500`
 
 This means that there is an error in your PHP, but unlike XAMPP, PHP by default will not raise an error on the website.
 
 You have 2 options for viewing the error:
-+ Via Webmin > Logs and Reports > Nginx Error Log
-+ [Set in .user.ini](#fastcgi): `display_errors = On`
+
+- Via Webmin > Logs and Reports > Nginx Error Log
+- [Set in .user.ini](#fastcgi): `display_errors = On`
 
 #### Nginx Error `502 Bad Gateway` page
 
