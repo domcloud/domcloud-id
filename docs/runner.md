@@ -2,16 +2,15 @@
 layout: docs
 ---
 
-## Setup with Script Runner
+## Setup dengan Script Runner
 
-The runner is the core feature in DOM Cloud. It let's you to perform automatic configuration all by convenience of a single script.
+Runner adalah fitur inti di DOM Cloud. Ini memungkinkan Anda untuk melakukan konfigurasi otomatis semua dengan kenyamanan satu skrip.
 
-For common script deployments, you don't have to write it yourself. You can start from existing templates in [the homepage](https://domcloud.io/#templates) or [template repository](https://github.com/domcloud/dom-templates).
+Untuk penerapan skrip umum, Anda tidak perlu menulisnya sendiri. Anda dapat memulai dari template yang ada di [the homepage](https://domcloud.io/#templates) atau [template repository](https://github.com/domcloud/dom-templates).
 
-We make it as simple as possible to understand. And better, our runner script is open sourced. More in depth explanation is available in the repository page.
+Kami membuatnya sesederhana mungkin untuk dipahami. Dan lebih baik lagi,runner script kami adalah open source. Penjelasan lebih mendalam tersedia di halaman repositori.
 
-
-The script runner is in YAML format. For example to create a new WordPress instance:
+Script runner dalam format YAML. Misalnya untuk membuat instance WordPress baru :
 
 ```yaml
 source:
@@ -22,134 +21,139 @@ nginx:
   ssl: enforce
   fastcgi: on
   locations:
-  - match: /
-    try_files: $uri $uri/ /index.php$is_args$args
+    - match: /
+      try_files: $uri $uri/ /index.php$is_args$args
 commands:
-- cp wp-config-sample.php wp-config.php
-- sed -i "s/database_name_here/${DATABASE}/g" wp-config.php
-- sed -i "s/username_here/${USERNAME}/g" wp-config.php
-- sed -i "s/password_here/${PASSWORD}/g" wp-config.php
-- sed -i "s/utf8/utf8mb4/g" wp-config.php
+  - cp wp-config-sample.php wp-config.php
+  - sed -i "s/database_name_here/${DATABASE}/g" wp-config.php
+  - sed -i "s/username_here/${USERNAME}/g" wp-config.php
+  - sed -i "s/password_here/${PASSWORD}/g" wp-config.php
+  - sed -i "s/utf8/utf8mb4/g" wp-config.php
 ```
 
-With a quick look, you can tell that it will download `https://wordpress.org/latest.zip` extracting and moving it out of `wordpress` directory, then creating a mysql database and signing SSL certificate, also configuring the correct NginX record for WordPress and perform quick `sed` operations to inject database credentials directly to the config files.
+Dengan melihat sekilas, Anda dapat mengetahui bahwa itu akan diunduh `https://wordpress.org/latest.zip` mengekstrak dan memindahkannya dari `wordpress` directory, kemudian membuat database mysql dan menandatangani sertifikat SSL, juga mengonfigurasi catatan NginX yang benar untuk WordPress dan melakukan dengan cepat `sed` operasi untuk inject database credentials langsung ke file konfigurasi.
 
-Here's what you can configure:
+Inilah yang dapat Anda konfigurasikan:
 
 ---
 
 ### `source`
 
-Type: `string` or `object`. If it a string, it will be the `url`.
+tipe : `string` atau `object`. Jika itu string, itu akan menjadi `url`.
 
-If this value is set, it will download contents inside the host. The content can be either a ZIP file or a Git repository (to perform clone).
+Jika nilai ini disetel, itu akan mengunduh konten di dalam host. Konten dapat berupa file ZIP atau repositori Git (untuk melakukan kloning).
 
-> CAUTION: This action will **overwrite** all contents inside the host.
+> PERHATIAN: Tindakan ini akan **menimpa** semua konten di dalam host.
 
 #### `url`
-The zip (or clone) URL to download. Required.
+
+Zip (atau kloning) URL untuk diunduh. Required.
 
 #### `type`
-To `extract` a ZIP file or `clone` a repo. If omitted, it autodetects whether it is a `github.com` or `gitlab.com` URL and perform `clone` instead of `extract`.
+
+untuk `extract` file ZIP atau `clone` sebuah repo. Jika dihilangkan, itu otomatis mendeteksi apakah itu `github.com` atau `gitlab.com` URL dan Lakukan `clone` sebagai ganti `extract`.
 
 #### `directory` (`type: extract` only)
-Specify the folder name to move out of ZIP file after extraction. This also can be specified from `url`'s hash. If omitted, no move operation performed.
 
-> For legacy reason, a `directory` in root config will works too, it will be converted as `source.directory`.
+menentukan nama folder yang akan dipindahkan dari file ZIP setelah ekstraksi. Ini juga dapat ditentukan dari hash `url`. Jika dihilangkan, tidak ada operasi pemindahan yang dilakukan.
+
+> Untuk alasan warisan, sebuah `directory` di root config juga akan berfungsi, itu akan dikonversi sebagai `source.directory`.
 
 #### `branch` (`type: clone` only)
-Specify the clone branch to get checked out. This also can be specified from directory or `url`'s hash. If omitted, the default branch is checked out.
+
+menentukan clone branch untuk diperiksa. Ini juga dapat ditentukan dari direktori atau `url`'s hash. Jika dihilangkan, cabang default akan dicentang.
 
 #### `shallow` (`type: clone` only)
-Do shallow clone? Default to `true`. It is recommended to leave it that way to keep `.git` internal size low.
+
+melakukan shallow clone? bawaan ke `true`. Disarankan untuk membiarkannya seperti itu untuk menjaga `.git` ukuran internal rendah.
 
 #### `submodules` (`type: clone` only)
-Do Recursive clone of submodules? Default to `false`.
+
+melakukan Recursive clone of submodules? bawaan ke `false`.
 
 ---
 
 ### `features`
 
-Type: Array of `string` or `object`. If one item is a string, it will be converted to object (.e.g. `mysql on` become `{ mysql: on }`).
+Type: Array of `string` atau `object`. Jika satu item adalah string, itu akan dikonversi menjadi objek (misal. `mysql on` menjadi `{ mysql: on }`).
 
-This configures all features available for the host in DOM Cloud.
+Ini mengonfigurasi semua fitur yang tersedia untuk host di DOM Cloud.
 
 #### mysql
 
-Configure MariaDB (MySQL).
+Menconfigurasi MariaDB (MySQL).
 
-+ `mysql` or `mysql on` Enable MariaDB and create default DB.
-+ `mysql create <dbname>` Create a new database with `<dbname>`.
-+ `mysql drop <dbname>` Drop a database with `<dbname>`.
-+ `mysql off`. Disables `mysql` feature. **Caution: Also drop all DB  permanently**.
+- `mysql` atau `mysql on` Mengaktifkan MariaDB dan membuat default DB.
+- `mysql create <dbname>` Membuat database baru `<dbname>`.
+- `mysql drop <dbname>` menghapus database `<dbname>`.
+- `mysql off`. Menonaktifkan fitur `mysql`. **PERHATIAN: ini juga menghapus DataBase secara permanen**.
 
 #### postgresql
 
-Configure PostgreSQL.
+Menconfigurasi PostgreSQL.
 
-+ `postgresql` or `postgresql on` Enable PostgreSQL and create default DB.
-+ `postgresql create <dbname>` Create a new database with `<dbname>`.
-+ `postgresql drop <dbname>` Drop a database with `<dbname>`.
-+ `postgresql off`. Disables `postgresql` feature. **Caution: Also drop all DB permanently**.
+- `postgresql` atau `postgresql on` Mengaktifkan PostgreSQL dan membuat default DB.
+- `postgresql create <dbname>` Membuat database baru `<dbname>`.
+- `postgresql drop <dbname>` menghapus database `<dbname>`.
+- `postgresql off`. Menonaktifkan fitur `postgresql`. **PERHATIAN: ini juga menghapus DataBase secara permanen**.
 
 #### dns
 
-Configure BIND DNS Server.
+Menconfigurasi BIND DNS Server.
 
-+ `dns` or `dns on` Enable DNS server.
-+ `dns add <type> <value>` Add a record.
-+ `dns rem <type> <value>` Deletes a record.
-+ `dns off`. Disables `dns` feature. **Caution: Also clears all DNS records**.
+- `dns` atau `dns on` Mengaktifkan DNS server.
+- `dns add <type> <value>` Menambahkan record.
+- `dns rem <type> <value>` Menghapus record.
+- `dns off`. Menonaktifkan fitur `dns`. **Caution: Also clears all DNS records**.
 
-DNS records for child server is handled automatically.
+DNS records untuk child server ditangani secara otomatis.
 
 #### firewall
 
-Configure Whitelist Firewall.
+mengkonfigurasi Whitelist Firewall.
 
-+ `firewall on` or `firewall` Enable firewall.
-+ `firewall off` Disable firewall.
+- `firewall on` atau `firewall` mengaktifkan firewall.
+- `firewall off` menonaktifkan firewall.
 
-Firewall is an additional protection to make sure the host won't send any outgoing request not defined in the [whitelist](). It's recommended for any host who doesn't use any third-party API.
+Firewall adalah perlindungan tambahan untuk memastikan host tidak akan mengirim permintaan keluar yang tidak ditentukan dalam [whitelist](). Direkomendasikan untuk host mana pun yang tidak menggunakan API pihak ketiga.
 
-**Please note due to obvious PHP weakness in security, it's mandatory to turn on this feature for WordPress or any weakly protected PHP server**.
+**Harap dicatat karena kelemahan PHP yang jelas dalam keamanan, itu wajib untuk mengaktifkan fitur ini untuk WordPress atau server PHP yang dilindungi dengan lemah**.
 
 #### ssl
 
-Attempt to renew SSL certificate.
+Coba perbarui SSL certificate.
 
 #### root
 
-Set directory root path.
+Atur directory root path.
 
 #### php
 
-Set PHP (FastCGI) version. Available options:
+Atur PHP (FastCGI) version. Pilihan yang tersedia:
 
-+ `php 5.6`
-+ `php 7.4` (default)
-+ `php 8.0`
+- `php 5.6`
+- `php 7.4` (default)
+- `php 8.0`
 
-Remember that `php 8.x` is an active release. It will automatically get incremented over time.
+Ingat `php 8.x` adalah rilis aktif. Secara otomatis akan bertambah seiring waktu.
 
 #### node
 
-Install specific NodeJS version.
+Install spesifik versi NodeJS.
 
-By default it's Node 14.x
+untuk default adalah Node 14.x
 
 #### python
 
-Install specific Python version.
+Install spesifik versi Python.
 
-By default it's Python 3.6
+untuk default adalah Python 3.6
 
 #### ruby
 
-Install specific Ruby version.
+Install spesifik versi Ruby.
 
-By default it's Ruby 2.7
-
+Untuk default adalah Ruby 2.7
 
 ---
 
@@ -157,32 +161,32 @@ By default it's Ruby 2.7
 
 Type: `object`.
 
-This is the NGINX configuration for a given host.
+Ini adalah konfigurasi NGINX untuk host tertentu.
 
 #### `ssl`
 
-HTTPS options: `on` (default), `enforce` (always redirect HTTP to HTTPS), `off` (not recommended).
+HTTPS options: `on` (default), `enforce` (selalu redirect HTTP ke HTTPS), `off` (tidak direkomendasikan).
 
 #### `fastcgi`
 
-Whether to enable or not enable PHP file execution: `on` or `off`. If omitted, `off` is the default.
+Apakah akan mengaktifkan atau tidak mengaktifkan eksekusi file PHP: `on` atau `off`. Jika dihilangkan, `off` adalah default.
 
-If you set this to `on`, please consider to turn the [`firewall`](#firewall) on.
+Jika Anda mengatur ini ke `on`, tolong pertimbangkan untuk memutar [`firewall`](#firewall) on.
 
-You can override PHP settings via the `.user.ini` file in the document root. Once changed it will not change immediately due to cache, but usually takes no more than 5 minutes.
+Anda dapat mengganti pengaturan PHP melalui `.user.ini` ile di root dokumen. Setelah diubah tidak akan langsung berubah karena cache, tetapi biasanya membutuhkan waktu tidak lebih dari 5 menit.
 
 #### `error_pages`
 
-List of error pages command. It's particularly useful for static websites. Read on [the NGINX docs](http://nginx.org/en/docs/http/ngx_http_core_module.html#error_page).
+Daftar perintah halaman Eror. Ini sangat berguna untuk situs web statis. Baca selengkapnya [the NGINX docs](http://nginx.org/en/docs/http/ngx_http_core_module.html#error_page).
 
-+ `404 /404.html`: Show `404` error page as `404.html`.
-+ `404 =200 /200.html`: Assume `404` error as 200 OK and show `200.html` (SPA).
-+ `500 502 503 504 /50x.html`: Show `50x` error as `50x.html`.
+- `404 /404.html`: menunjukan `404` error page as `404.html`.
+- `404 =200 /200.html`: menganggap `404` error as 200 OK and menunjukan `200.html` (SPA).
+- `500 502 503 504 /50x.html`: menunjukan `50x` error as `50x.html`.
 
 ### `passenger`
 
-If you want to run Non-PHP apps, you need to setup with passenger phusion.
-To enable non-PHP apps, at minimum you need these configuration:
+Jika Anda ingin menjalankan aplikasi Non-PHP, Anda perlu mengatur dengan passenger phusion.
+Untuk menonaktifkan aplikasi non-PHP , minimal Anda memerlukan konfigurasi berikut:
 
 ```yaml
 root: public_html/public
@@ -191,41 +195,41 @@ passenger:
   app_start_command: node server.js --port=$PORT
 ```
 
-The configuration above will execute `node server.js --port=$PORT` in the parent of root folder (in this case, `~/public_html`). Note that you need to pass the `$PORT` and use that as the port where your app is listening to. If your app accept port from environment instead you can use env like `env PORT=$PORT node server.js`.
+Konfigurasi di atas akan dijalankan `node server.js --port=$PORT` di induk folder root (dalam hal ini, `~/public_html`). Perhatikan bahwa Anda harus melewati `$PORT` dan gunakan itu sebagai port tempat aplikasi Anda. Jika aplikasi Anda menerima port dari environment Anda dapat menggunakan env seperti `env PORT=$PORT node server.js`.
 
-For custom environment values you can use `app_envs` but it's recommended to write directly to `~/.env` instead.
+untuk custom environment nilai anda dapat menggunakan `app_envs` tapi disarankan untuk menulis langsung ke `~/.env` sebagai gantinya.
 
-To restart a non-PHP apps you can execute `passenger-config restart-app /`.
+Untuk memulai ulang aplikasi non-PHP, Anda dapat menjalankan `passenger-config restart-app /`.
 
-Available options:
+Pilihan yang tersedia:
 
-+ `enabled`: (`on` or `off`)
-+ `app_envs`: array of environments
-+ `app_start_command`: Passenger GLS command
-+ `app_type`: Type of App (for non GLS)
-+ `startup_file`: Startup filename (for non GLS)
-+ `ruby`: Ruby path (for non GLS)
-+ `nodejs`: Nodejs path (for non GLS)
-+ `python`: Python path (for non GLS)
-+ `meteor_app_settings`: Meteor path (for non GLS)
-+ `friendly_error_pages`: (`on` or `off`)
-+ `document_root`: path to public document root (default is `root`)
-+ `base_uri`: base URL
-+ `app_root`: path to app root (default is parent of `root`)
-+ `sticky_sessions`: (`on` or `off`) enable this for websocket support
+- `enabled`: (`on` atau `off`)
+- `app_envs`: array of environments
+- `app_start_command`: Passenger GLS command
+- `app_type`: Type of App (untuk non GLS)
+- `startup_file`: Startup filename (untuk non GLS)
+- `ruby`: Ruby path (untuk non GLS)
+- `nodejs`: Nodejs path (untuk non GLS)
+- `python`: Python path (untuk non GLS)
+- `meteor_app_settings`: Meteor path (untuk non GLS)
+- `friendly_error_pages`: (`on` atau `off`)
+- `document_root`: path to public document root (default is `root`)
+- `base_uri`: base URL
+- `app_root`: path to app root (default is parent of `root`)
+- `sticky_sessions`: (`on` atau `off`) aktifkan ini untuk dukungan websocket
 
 ### `locations`
 
 Array objects which one or more of:
 
-+ `match`: Matching URL location (required)
-+ `root`: Root path (relative to `~`)
-+ `alias`: Alias path (relative to `~`)
-+ `rewrite`: Rewrite URL directive
-+ `try_files`: Try files URL directive
-+ `return`: Return code directive
-+ `fastcgi`: (same as above)
-+ `passenger`: (same as above)
+- `match`: Matching URL location (required)
+- `root`: Root path (relative to `~`)
+- `alias`: Alias path (relative to `~`)
+- `rewrite`: Rewrite URL directive
+- `try_files`: Try files URL directive
+- `return`: Return code directive
+- `fastcgi`: (same as above)
+- `passenger`: (same as above)
 
 ---
 
@@ -233,17 +237,15 @@ Array objects which one or more of:
 
 Type: array of `string`.
 
-List of SSH commands in sequence. The starting directory is always `~/public_html`. If any exit code detected to be not zero, the execution chain stop.
+Daftar perintah SSH secara berurutan. Direktori awal selalu `~/public_html`. Jika ada kode keluar yang terdeteksi bukan nol, rantai eksekusi berhenti.
 
-This is where all the things you usually put after the execution of `source`. Things like installing depedencies, bundling frontend or injecting database credential.
+Di sinilah semua hal yang biasanya Anda letakkan setelah eksekusi `source`. Hal-hal seperti menginstal depedencies, menggabungkan frontend atau injecting database credential.
 
-One of examples which good for production environment will be:
+Salah satu contoh yang baik untuk production environment adalah:
 
 #### Installing depedencies
 
-+ PHP `composer.json`: `composer install --no-dev --no-cache --optimize-autoloader`
-+ NodeJS `package.json`: `npm ci` or `yarn install --freeze-lockfile`
-+ Python `requirements.txt`: `pip install --no-cache-dir --user -r requirements.txt`
-+ Ruby `gem.bundle`: `bundle install --without development test`
-
-
+- PHP `composer.json`: `composer install --no-dev --no-cache --optimize-autoloader`
+- NodeJS `package.json`: `npm ci` or `yarn install --freeze-lockfile`
+- Python `requirements.txt`: `pip install --no-cache-dir --user -r requirements.txt`
+- Ruby `gem.bundle`: `bundle install --without development test`
