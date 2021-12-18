@@ -33,63 +33,63 @@ layout: docs
 
 #### Passenger Phusion
 
-- Passenger Phusion Node.JS looks for `app.js`, `passenger_wsgi.py` or `config.ru` in parent of root path to start the app.
-- The GLS feature from Passenger Phusion can start any app, even binary files.
-- Passenger Phusion Node.JS works with CJS. If your project use ESM you need to use GLS.
-- Passenger Phusion will be activated if `passenger_enabled on` and no files present in destination path.
-- You can tell if Phusion is serving a file by checking `server: nginx + Phusion Passenger` HTTP header.
-- Static files is often better to be handled within NginX alone to make use of `E-Tag` cache.
-- You can add environment variables by writing in `~/.env` (and use commands like this: `export NODE_ENV=production`)
+- Passenger Phusion Node.JS mencari `app.js`, `passenger_wsgi.py` atau `config.ru` di induk jalur root untuk memulai aplikasi.
+- Fitur GLS dari Passenger Phusion dapat memulai aplikasi apa pun, bahkan file biner.
+- Passenger Phusion Node.JS bekerja dengan CJS. Jika proyek Anda menggunakan ESM, Anda perlu menggunakan GLS.
+- Passenger Phusion akan diaktifkan jika `passenger_enabled on` dan tidak ada file yang ada di jalur path.
+- Anda dapat mengetahui apakah Phusion menyajikan file dengan memeriksa `server: nginx + Phusion Passenger` HTTP header.
+- File statis seringkali lebih baik ditangani dalam NginX saja untuk memanfaatkan `E-Tag` cache.
+- Anda dapat menambahkan environment variables dengan menulis di `~/.env` (dan gunakan perintah seperti ini: `export NODE_ENV=production`)
 
-## Common Errors Troubleshooting
+## Kesalahan Umum dan penanganannya
 
-For PHP, Error logs is available in error logs provided by Virtualmin.
+Untuk PHP, Error logs tersedia di log kesalahan yang disediakan oleh Virtualmin.
 
-For Non-PHP (via Phusion Passenger), error logs is not available but if your app is failed to start up, a nice detailed explanation for the crash is available.
+Untuk Non-PHP (melalui Phusion Passenger), log error tidak tersedia tetapi jika aplikasi Anda gagal untuk memulai, penjelasan rinci yang bagus untuk kerusakan tersedia.
 
 #### Website down `ERR_NAME_NOT_RESOLVED`
 
-This means that there is a problem with the DNS system. If you are using DOM Cloud make sure:
+Ini berarti ada masalah dengan sistem DNS. Jika Anda menggunakan DOM Cloud pastikan:
 
-- Has fulfilled the requirements / required documents (including email confirmation) from the Registrar.
-- Already pointing the Name Server correctly (scroll up if not already).
-- The DNS feature for the server is turned on (set up via webmin).
-- The A / CNAME records for the intended domain are correct.
+- Telah memenuhi persyaratan/dokumen yang dipersyaratkan (termasuk email konfirmasi) dari Registrar .
+- Sudah mengarahkan Name Server dengan benar (scroll ke atas jika belum).
+- Fitur DNS untuk server dihidupkan (diatur melalui webmin).
+- The A / CNAME untuk domain yang dimaksud sudah benar.
 
-You can [contact us](mailto:support@domcloud.id) if it is still not correct.
+Kamu bisa [Hubungi kami](mailto:support@domcloud.id) jika masih eror.
 
 #### HTTPS Error `ERR_CERT_AUTHORITY_INVALID`
 
-This means that your SSL certificate has not been set or has expired. To update it please [scroll up](#how-to-renew-ssl).
+Ini berarti bahwa sertifikat SSL Anda belum disetel atau telah kedaluwarsa. Untuk memperbaruinya, tolong [scroll kebawah](#how-to-renew-ssl).
 
-If you encounter `ERR_CERTIFICATE_TRANSPARENCY_REQUIRED` after an SSL update, you don't need to panic because of an error due to cache and it will disappear in a few minutes.
+Jika Anda bertemu `ERR_CERTIFICATE_TRANSPARENCY_REQUIRED` setelah update SSL tidak perlu panik karena error karena cache dan akan hilang dalam beberapa menit.
 
 #### Nginx Error `403 Forbidden` page
 
-This means that NGINX cannot access the file due to a linux mode setting error in the file. In order to fix this easily you can run this on SSH:
+Ini berarti NGINX tidak dapat mengakses file karena kesalahan pengaturan mode linux dalam file. Untuk memperbaikinya dengan mudah, Anda dapat menjalankan ini di SSH:
 
 `bash chmod -R 750 ~/`
 
 #### Nginx Error page `404 Found`
 
-There are 2 possibilities:
+Ada 2 kemungkinan:
 
-- If this happens for all page URLs, chances are you forgot to set NGINX to [setup index.php](#how-to-install-php-framework) or [turn on passenger mode](#passenger) for non-PHP.
-- If this happens for only a few files, there may be errors such as typo in the URL, wrong Base URL or not paying attention to the file name size.
+- Jika ini terjadi untuk semua URL halaman, kemungkinan Anda lupa menyetel NGINX ke [setup index.php](#how-to-install-php-framework) atau [turn on passenger mode](#passenger) untuk non-PHP.
+- Jika ini terjadi hanya untuk beberapa file, mungkin ada kesalahan seperti salah ketik pada URL, URL Base salah atau tidak memperhatikan ukuran nama file.
 
 #### Blank page `HTTP Error 500`
 
-This means that there is an error in your PHP, but unlike XAMPP, PHP by default will not raise an error on the website.
+Artinya ada error pada PHP anda, namun tidak seperti XAMPP, PHP secara default tidak akan memunculkan error pada website.
 
-You have 2 options for viewing the error:
+Anda memiliki 2 opsi untuk melihat kesalahan:
 
 - Via Webmin > Logs and Reports > Nginx Error Log
 - [Set in .user.ini](#fastcgi): `display_errors = On`
 
 #### Nginx Error `502 Bad Gateway` page
 
-It is possible that the file you uploaded is too large or the PHP script you are running is taking too long. You can fix this via [.user.ini](#fastcgi) file.
+Ada kemungkinan file yang Anda unggah terlalu besar atau skrip PHP yang Anda jalankan terlalu lama. Anda dapat memperbaikinya melalui[.user.ini](#fastcgi) file.
 
 #### "Connection Refused" from server HTTP request
 
-You need to turn off the firewall.
+Anda harus mematikan firewall.
