@@ -61,7 +61,7 @@
   renew: Per Tahun
   items:
   - icon: fa-hdd
-    text: Kapasitas Disk <b>4 GiB</b>
+    text: Kapasitas Disk <b>5 GiB</b>
   - icon: fa-briefcase
     text: Data Transfer Bulanan <b>10 GiB</b>
   - icon: fa-business-time
@@ -80,7 +80,7 @@
   renew: Per Tahun
   items:
   - icon: fa-hdd
-    text: Kapasitas Disk <b>7 GiB</b>
+    text: Kapasitas Disk <b>12 GiB</b>
   - icon: fa-briefcase
     text: Data Transfer Bulanan <b>30 GiB</b>
   - icon: fa-business-time
@@ -99,7 +99,7 @@
   renew: Per Tahun
   items:
   - icon: fa-hdd
-    text: Kapasitas Disk <b>10 GiB</b>
+    text: Kapasitas Disk <b>20 GiB</b>
   - icon: fa-briefcase
     text: Data Transfer Bulanan <b>50 GiB</b>
   - icon: fa-business-time
