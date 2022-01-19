@@ -1,22 +1,25 @@
 -
   - id: faq01
     title: Apakah Paket Freedom benar-benar Gratis?
-    body: <p>Ya, paket Freedom tidak membutuhkan pengajuan khusus apapun. Paket Freedom mempunyai masa tenggang hingga 2 bulan, namun anda dapat memperpanjang masa tenggang tersebut kapanpun anda mau.</p>
+    body: <p>Ya, paket Freedom tidak membutuhkan pengajuan khusus apapun. Paket Freedom mempunyai masa tenggang hingga 2 bulan, namun anda dapat memperpanjang masa tenggang tersebut berapa kalipun anda mau.</p>
   - id: faq02
     title: Apa saja metode Pembayarannya?
-    body: <p>Kami melayani pembayaran melalui VA BNI / Mandiri, Gerai Indomart / Alfamart, serta layanan e-Wallet dalam LinkAja, OVO, Dana, GoPay, ShopeePay dan BCA Mobile.</p>
+    body: <p>Kami melayani pembayaran melalui VA BNI / Mandiri, Gerai Indomart / Alfamart, serta layanan e-Wallet QRIS dalam LinkAja, OVO, Dana, GoPay, ShopeePay dan BCA Mobile.</p>
   - id: faq03
     title: Apakah ada biaya lain selain hosting?
-    body: <p>Jika anda ingin domain yang selain berakhiran <b>.dom.my.id</b>, anda dapat membeli domain yang <a href="/domain.html" target="_blank" rel="noopener noreferrer">tertera disini</a>. Selain itu ada tambahan biaya Rp. 5000 di setiap transaksi dalam DOM Cloud.</p>
+    body: <p>Jika anda ingin domain yang selain berakhiran <b>.dom.my.id</b> atau <b>.domcloud.id</b>, anda dapat membeli domain yang <a href="/domain.html">tertera disini</a>. Selain itu ada tambahan biaya Rp. 5000 di setiap transaksi dalam DOM Cloud.</p>
   - id: faq04
     title: Apa kami dapat mengajukan Refund?
-    body: <p>Apabila umur hosting anda kurang dari 30 hari sejak tanggal pembelian, anda dapat mengontak support untuk memproses pengajuan refund anda. Jumlah refund ialah 90% dari harga hosting yang dibeli dan itu tidak termasuk pembelian bandwidth add-on ataupun domain.</p>
+    body: <p>Apabila umur hosting anda kurang dari 30 hari sejak tanggal pembelian, anda dapat mengirim bantuan support untuk memproses pengajuan refund anda. Jumlah refund ialah 90% dari harga hosting yang dibeli dan itu tidak termasuk pembelian bandwidth add-on ataupun domain.</p>
+  - id: faq05
+    title: Apakah pembelian ini berlaku untuk banyak hosting atau domain?
+    body: <p>Tidak. Semua pembelian berlaku untuk masing-masing hosting dan masing-masing hosting hanya terikat pada sa.</p>
 -
   - id: faq10
-    title: Bedanya Storage dan Bandwidth?
-    body: <p>Storage adalah batas penyimpanan yang dihitung sebagai jumlah kapasitas file, database, dan data server lainnya. Sedangkan Bandwidth adalah batasan data yang dikirim dalam tempo waktu tertentu.</p>
+    title: Apa itu kapasitas disk?
+    body: <p>Kapasitas disk (storage) adalah batas untuk semua file, database, dan data server lainnya yang terikat . Sedangkan Bandwidth adalah batasan data yang dikirim dalam tempo waktu tertentu.</p>
   - id: faq11
-    title: Bagaimana prinsip pembatasan Bandwidth?
+    title: Apa itu data transfer? Apa bedanya bulanan dan add-ons?
     body: <p> Bandwidth yang tertera adalah bandwidth dalam hitungan per tahun. Namun pembatasan efektif dilakukan per bulan. Misalkan, untuk paket Freedom anda mendapatkan 12 GB bandwidth, maka anda dibatasi 1 GB tiap bulan. Pembatasan ini akan direset ulang tiap awal bulan.</p>
   - id: faq12
     title: Bagaimana cara menghitung kebutuhan Bandwidth?
