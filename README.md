@@ -61,7 +61,7 @@ Lalu bagaimana dengan keamanan website anda sendiri? Sudah menjadi kewajiban and
 
 ### Bagaimana Cara Mengedit Website?
 
-Anda dapat masuk melalui [portal](https://portal.domcloud.id) lalu membuka tab "Login". Disitu anda dapat melihat beberapa macam kredensial login untuk mengakses:
+Anda dapat masuk melalui [portal](https://my.domcloud.co) lalu membuka tab "Login". Disitu anda dapat melihat beberapa macam kredensial login untuk mengakses:
 
 + **Webmin** untuk akses pengaturan utama hosting, termasuk upload file, mengatur akses database dan DNS.
 + **FTP** untuk akses file menggunakan aplikasi FTP (seperti FileZilla Client atau WinScpy).

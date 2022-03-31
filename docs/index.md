@@ -39,7 +39,7 @@ DOM Cloud adalah solusi hosting bersama dan _statelessness_ atau _immutability_ 
 
 ## Untuk memulai
 
-Anda dapat mulai menghosting situs web dari [portal](https://portal.domcloud.id/en/login). Kemudian:
+Anda dapat mulai menghosting situs web dari [portal](https://my.domcloud.co/en/login). Kemudian:
 
 1. Buat akun atau login
 2. Klik "Orde Baru", ini akan membuka formulir untuk membuat host baru.
