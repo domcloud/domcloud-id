@@ -13,27 +13,27 @@
     text: Tim maks <b>2 akun</b>
 - title: Paket Kit
   style: 'color: darkblue'
-  price: Rp. 500.000
+  price: Rp. 300.000
   renew: Per Tahun
   items:
   - icon: fa-hdd
-    text: Kapasitas Disk <b>10 GiB</b>
+    text: Kapasitas Disk <b>6 GiB</b>
   - icon: fa-briefcase
-    text: Data Transfer Bulanan <b>25 GiB</b>
+    text: Data Transfer Bulanan <b>20 GiB</b>
   - icon: fa-business-time
     text: Maksimal <b>10 website</b>
   - icon: fa-users
     text: Tim maks <b>5 akun</b>
 - title: Paket Pro
   style: 'color: white; background: black; text-shadow: 0 0 15px white'
-  price: Rp. 1.250.000
+  price: Rp. 1.000.000
   renew: Per Tahun
   items:
   - icon: fa-hdd
-    text: Kapasitas Disk <b>25 GiB</b>
+    text: Kapasitas Disk <b>20 GiB</b>
   - icon: fa-briefcase
-    text: Data Transfer Bulanan <b>100 GiB</b>
+    text: Data Transfer Bulanan <b>80 GiB</b>
   - icon: fa-business-time
-    text: Maksimal <b>25 website</b>
+    text: Maksimal <b>20 website</b>
   - icon: fa-users
     text: Tim maks <b>15 akun</b>
