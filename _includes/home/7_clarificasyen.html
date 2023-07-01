@@ -1,0 +1,35 @@
+<div class="modal fade" id="moveModal" tabindex="-1" aria-labelledby="moveModalLabel" aria-hidden="true"
+  data-bs-backdrop="static" data-bs-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="moveModalLabel">Sorry</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p> DOM Cloud is a free hosting service for everyone, our official domain is <a href="https://domcloud.co"
+            target="_blank" rel="noreferrer">domcloud.co</a>.</p>
+        <p>This site is available and useful only for our users in Indonesia, and we detected that you're outside of it.
+        </p>
+        <p>Would you like to be redirected to our main site?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal"
+          onclick="localStorage.dontasktomove = 1">No, don't ask again</button>
+        <a href="https://domcloud.co" class="btn btn-primary">Go to the main site</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+    // check timezone is not Indonesia, then ask to move
+    let indonesiaTimezone = ['Asia/Jakarta', 'Asia/Pontianak', 'Asia/Makassar', 'Asia/Jayapura'];
+    let currentTimezone = localStorage.timeZone || Intl.DateTimeFormat().resolvedOptions().timeZone;
+    if (currentTimezone && !indonesiaTimezone.includes(currentTimezone) && !localStorage.dontasktomove) {
+      const moveModal = new bootstrap.Modal(document.getElementById('moveModal'))
+      moveModal.show();
+    }
+  });
+</script>
