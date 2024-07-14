@@ -33,8 +33,14 @@
         }, {
             "val": 250000,
             "plan": "Paket Pro",
-            "price": "Rp. 1.000.000",
+            "price": "Rp. 600.000",
             "desc": "Untuk website ambisius",
+            "color": "lightblue",
+        }, {
+            "val": 500000,
+            "plan": "Paket Max",
+            "price": "Rp. 1.800.000",
+            "desc": "Untuk website dengan bigdata",
             "color": "lightblue",
         }];
         const lerpColor = function (a, b, amount) {
@@ -53,13 +59,13 @@
             return (rr << 16) + (rg << 8) + (rb | 0);
         };
         var f = function (e) {
-            var v = Math.ceil(Math.pow(e.target.value, 4) * 1000) * 250
+            var v = Math.ceil(Math.pow(e.target.value, 4) * 1000) * 500
             var t = rlist.findIndex(x => x.val >= v);
             document.getElementById('rval').innerText = v.toLocaleString();
             document.getElementById('rplan').innerText = rlist[t].plan;
             document.getElementById('rprice').innerText = rlist[t].price;
             document.getElementById('rdesc').innerText = rlist[t].desc;
-            document.getElementById('rcolor').style.backgroundColor = '#' + lerpColor(0xffffff, 0x000020, e.target.value - 0.1).toString(16);
+            document.getElementById('rcolor').style.backgroundColor = '#' + lerpColor(0xffffff, 0x000020, e.target.value).toString(16);
             document.getElementById('rcolor').style.color =  rlist[t].color;
             document.getElementById('rcolor').style.boxShadow = `inset 0 0 ${t}px ${t * 2}px ` + rlist[t].color;
         };
