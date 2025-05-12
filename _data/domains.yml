@@ -1,23 +1,23 @@
 indo:
 - dom: .ID
-  price: 235K
+  price: 250K
   req: KTP
   bg: '#5e5'
 - dom: .CO.ID
-  price: 335K
-  req: KTP, Akta/Izin
+  price: 320K
+  req: KTP, Akta/Izin PT
   bg: '#8f8'
 - dom: .MY.ID
-  price: 25K
+  price: 40K
   req: KTP
   bg: '#5e5'
 - dom: .BIZ.ID
-  price: 70K
+  price: 80K
   req: KTP
   bg: '#8f8'
 - dom: .OR.ID
   price: 70K
-  req: KTP, Akta/Izin
+  req: KTP, Akta/Izin Organisasi
   bg: '#5e5'
 - dom: .WEB.ID
   price: 70K
@@ -25,89 +25,89 @@ indo:
   bg: '#8f8'
 - dom: .AC.ID
   price: 70K
-  req: KTP, SK, Kuasa
+  req: KTP, SK Universitas, Surat Kuasa dari Uni
   bg: '#5e5'
 - dom: .SCH.ID
   price: 70K
-  req: KTP, SK, Kuasa
+  req: KTP, SK Sekolah, Surat Kuasa dari Sekolah
   bg: '#8f8'
 - dom: .PONPES.ID
   price: 70K
-  req: KTP, SK
+  req: KTP, SK Pondok Pesantren
   bg: '#5e5'
 global:
 - dom: .COM
-  price: 170K
-  renew: 170K
+  price: 180K
+  renew: 180K
   for: Komersil
   bg: '#8f8'
 - dom: .NET
-  price: 200K
-  renew: 200K
+  price: 220K
+  renew: 220K
   for: Jaringan
   bg: '#5e5'
 - dom: .ORG
-  price: 155K
-  renew: 200K
+  price: 190K
+  renew: 190K
   for: Organisasi
   bg: '#8f8'
 - dom: .BIZ
-  price: 255K
-  renew: 255K
+  price: 260K
+  renew: 260K
   for: Bisnis
   bg: '#5e5'
 - dom: .XYZ
-  price: 185K
-  renew: 185K
+  price: 170K
+  renew: 210K
   for: Unik
   bg: '#8f8'
 - dom: .SITE
-  price: 35K
-  renew: 415K
+  price: 480K
+  renew: 480K
   for: Sederhana
   bg: '#5e5'
 - dom: .ONLINE
-  price: 35K
-  renew: 515K
+  price: 480K
+  renew: 480K
   for: Online
   bg: '#8f8'
 - dom: .TECH
-  price: 55K
-  renew: 710K
+  price: 750K
+  renew: 750K
   for: Teknologi
   bg: '#5e5'
 - dom: .INFO
-  price: 75K
-  renew: 240K
+  price: 280K
+  renew: 330K
   for: Informasi
   bg: '#8f8'
 - dom: .IO
-  price: 910K
-  renew: 910K
+  price: 840K
+  renew: 840K
   for: Startup
   bg: '#5e5'
 - dom: .PRO
-  price: 85K
-  renew: 275K
+  price: 290K
+  renew: 330K
   for: Profesional
   bg: '#8f8'
 - dom: .SHOP
-  price: 135K
-  renew: 495K
+  price: 460K
+  renew: 460K
   for: Belanja
   bg: '#5e5'
 - dom: .LIVE
-  price: 55K
-  renew: 335K
+  price: 340K
+  renew: 410K
   for: Livestream
   bg: '#8f8'
 - dom: .NEWS
-  price: 335K
-  renew: 335K
+  price: 410K
+  renew: 410K
   for: Berita
   bg: '#5e5'
 - dom: .AGENCY
-  price: 295K
-  renew: 295K
+  price: 350K
+  renew: 350K
   for: Agensi
   bg: '#8f8'
